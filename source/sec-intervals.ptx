@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-intervals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Example of intervals,with count and notation in a descending C Melodic Minor Scale</title>
+
+  <p> Intervals of the descending Melodic Minor scale are the same as a descending Natural Minor Scale. </p>
+
+  <figure xml:id="fig-intervals-table">
+    <caption>Examples of intervals with notation and semitone counts.</caption>
+    <image>
+      <latex-image>
+        <![CDATA[
+\newcommand{\MusiC}[1]{\adjustbox{trim=145pt 0pt 140pt 0pt, valign=c}{%
+  \begin{music}
+    \nobarnumbers
+    \setclef10
+    \startextract
+    \notes #1
+    \endextract
+  \end{music}}}
+
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  Interval & Quality & Notes & On Staff & Number of Semitones & Count\\
+  \hline
+  Second & Minor     & C~-~B flat      & \MusiC{\qa j \qa {_i} \en} & 2 & 3\\
+  \hline
+  Second & Minor     & B flat~-~A flat & \MusiC{\qa {_i} \qa {_h} \en} & 2 & 3\\
+  \hline
+  Second & Major     & A flat~-~G      & \MusiC{\qa {_h} \qa g \en} & 1 & 2\\
+  \hline
+  Second & Major     & G~-~F           & \MusiC{\qa g \qa f \en} & 2 & 3\\
+  \hline
+  Second & Minor     & F~-~E flat      & \MusiC{\qa f \qa {_e} \en} & 2 & 3\\
+  \hline
+  Second & Augmented & E flat~-~D      & \MusiC{\qa {_e} \qa d \en} & 1 & 2\\
+  \hline
+  Second & Minor     & D~-~C           & \MusiC{\qa d \qa c \en} & 2 & 3\\
+  \hline
+\end{tabular}
+        ]]>
+      </latex-image>
+    </image>
+  </figure>
+
+
+
+
+
+</section>
