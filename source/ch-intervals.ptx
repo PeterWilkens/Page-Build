@@ -7,7 +7,7 @@
    <p>Before discussing scales it is useful to understand how the distance between notes is described.</p>
   <p>The musical distance between notes on  your instrument keyboard or on a musical staff is known as an <term>interval</term>. This <term>interval</term> is dependant on the number of semitones between notes and the <term>Interval</term> is described as a minor 2nd, a major 2nd, a minor 3rd, a major 3rd, a 5th, a 7th etc;</p>
   <p>The <term>interval</term> between two notes can be obtained by counting between notes on the keyboard or staff but, when counting, the first note, should be counted as one and not zero. Using this type of count the actual number of semitones
-     is 1 less than the count. Considering the C Major scale in Figure 3.1.1 the <term>interval</term> C to D is a Major second because there are 2 semitones between C and D. The <term>Count</term> is 3. That is, C to C<sharp/>:1 semitone. C<sharp/> to D:1 semitone. <term>Count</term> C is 1, C<sharp/> is 2 and D is 3. </p>
+     is 1 less than the count. Considering the C Major scale in Figure 3.2 the <term>interval</term> C to D is a Major second because there are 2 semitones between C and D. The <term>Count</term> is 3. That is, C to C<sharp/>:1 semitone. C<sharp/> to D:1 semitone. <term>Count</term> C is 1, C<sharp/> is 2 and D is 3. </p>
  <p>Similarly E to F is a Minor Second. One semitone between E and F and a count of 2. Count 1 at E and 2 at F.</p>
   
   
