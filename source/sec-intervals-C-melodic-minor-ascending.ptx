@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-intervals-c-harmonic-minor-ascending" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Example of intervals, with count and notation in an ascending C Melodic Minor scale</title>
+<section xml:id="sec-intervals-c-melodic-minor-ascending" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>C Melodic Minor Scale Intervals</title>
 
-  <p>In the Melodic Minor Scale the sixth and seventh notes of the Natural Minor scale are raised by a half step when ascending and the descending scale is as the Natural Minor scale.</p>
+  <p>In C melodic minor, the sixth and seventh scale degrees are raised when ascending; descending, the scale follows C natural minor.</p>
 
   
   <figure xml:id="fig-c-melodic-minor-scale-notation">
@@ -23,7 +23,7 @@
     </image>
   </figure>
 
-  <figure xml:id="fig-intervals-c-harmonic-minor-ascending-table">
+  <figure xml:id="fig-intervals-c-melodic-minor-ascending-table">
     <caption>Examples of intervals with notation and semitone counts (ascending C melodic minor).</caption>
     <image>
       <latex-image>

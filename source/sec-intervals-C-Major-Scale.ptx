@@ -7,6 +7,23 @@
   <p> All Major scales have the same pattern of intervals, so any Major scale can be built by using the same pattern of intervals.
   </p>
 
+  <figure xml:id="fig-c-major-scale-notation">
+    <caption>C major scale notation on a musical staff (ascending and descending).</caption>
+    <image>
+      <latex-image>
+        <![CDATA[
+\begin{music}
+  \nobarnumbers
+  \setclef10
+  \startextract
+  \notes \qa c \qa d \qa e \qa f \qa g \qa h \qa i \qa j \qa i \qa h \qa g \qa f \qa e \qa d \qa c \en
+  \endextract
+\end{music}
+        ]]>
+      </latex-image>
+    </image>
+  </figure>
+
   <figure xml:id="fig-intervals-c-major-scale-table">
     <caption>Examples of intervals with notation and semitone counts (C Major Scale).</caption>
     <image>

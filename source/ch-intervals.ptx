@@ -9,8 +9,9 @@
 
   <!-- include sections -->
   <xi:include href="sec-intervals-C-Major-Scale.ptx" />
+  <xi:include href="sec-intervals-C-harmonic-minor-scale.ptx" />
   <xi:include href="sec-intervals-C-natural-minor-ascending.ptx" />
-  <xi:include href="sec-intervals-C-harmonic-minor-ascending.ptx" />
+  <xi:include href="sec-intervals-C-melodic-minor-ascending.ptx" />
   <xi:include href="sec-intervals.ptx" />
 
 </chapter>

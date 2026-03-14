@@ -5,8 +5,10 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Intervals</title>
+    <subtitle>For adding to complete book
+      
+    </subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
