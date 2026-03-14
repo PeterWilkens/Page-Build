@@ -16,6 +16,7 @@
     <!-- Include chapters -->
     <xi:include href="./ch-chapter-title.ptx" />
     <xi:include href="./ch-intervals.ptx" />
+    <xi:include href="./ch-scales.ptx" />
 
     <!-- Include backmatter-->
     <xi:include href="./backmatter.ptx" />

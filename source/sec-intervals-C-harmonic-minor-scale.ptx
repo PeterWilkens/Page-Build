@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-intervals-c-harmonic-minor-scale" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Example of intervals. C Harmonic Minor Scale</title>
+  <title>C Harmonic Minor Scale</title>
 
-  <p> In a C harmonic minor scale the intervals remain the same ascending and descending. </p>
-  <p> All Harmonic Minor scales have the same pattern of intervals, so any Harmonic Minor scale can be built by using the same pattern of intervals. In this scale, the interval from A<flat/> to B is an augmented second, spanning three semitones while still being spelled as a second.
-  </p>
+  <p>In C harmonic minor, the interval pattern remains the same ascending and descending.</p>
+  <p>All harmonic minor scales have the same pattern of intervals, so any harmonic minor scale can be built by using this same pattern.</p>
+  <p>The C harmonic minor scale notes are C, D, E<flat/>, F, G, A<flat/>, B, and C. In this scale, the interval from A<flat/> to B is an augmented second, spanning three semitones while still being spelled as a second.</p>
 
   <figure xml:id="fig-c-harmonic-minor-scale-notation">
     <caption>C harmonic minor scale notation on a musical staff (ascending and descending).</caption>
@@ -25,7 +25,7 @@
   </figure>
 
   <figure xml:id="fig-intervals-c-harmonic-minor-scale-table">
-    <caption>Examples of intervals with notation and semitone counts (C Harmonic Minor Scale).</caption>
+    <caption>Examples of intervals with notation and semitone counts (C harmonic minor scale).</caption>
     <image>
       <latex-image>
         <![CDATA[

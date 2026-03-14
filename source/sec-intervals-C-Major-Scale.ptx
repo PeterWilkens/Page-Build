@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-intervals-c-major-scale" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Example of intervals. C Major Scale</title>
+  <title>C Major Scale</title>
 
-  <p> In a C major scale the intervals remain the same ascending and descending. </p>
-  <p> All Major scales have the same pattern of intervals, so any Major scale can be built by using the same pattern of intervals.
-  </p>
+  <p>In C major, the interval pattern remains the same ascending and descending.</p>
+  <p>All major scales have the same pattern of intervals, so any major scale can be built by using this same pattern.</p>
+  <p>The C major scale notes are C, D, E, F, G, A, B, and C.</p>
 
   <figure xml:id="fig-c-major-scale-notation">
     <caption>C major scale notation on a musical staff (ascending and descending).</caption>
@@ -25,7 +25,7 @@
   </figure>
 
   <figure xml:id="fig-intervals-c-major-scale-table">
-    <caption>Examples of intervals with notation and semitone counts (C Major Scale).</caption>
+    <caption>Examples of intervals with notation and semitone counts (C major scale).</caption>
     <image>
       <latex-image>
         <![CDATA[

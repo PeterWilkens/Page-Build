@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-intervals-c-melodic-minor-descending" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>C Melodic Minor Scale (Descending)</title>
+
+  <p>In C melodic minor descending, the sixth and seventh scale degrees are lowered to A<flat/> and B<flat/>, following the C natural minor form.</p>
+  <p>All melodic minor scales use this same descending interval pattern, so any melodic minor scale can be written descending by applying this pattern from tonic to tonic.</p>
+  <p>The C melodic minor descending scale notes are C, B<flat/>, A<flat/>, G, F, E<flat/>, D, and C.</p>
+
+  <figure xml:id="fig-c-melodic-minor-descending-scale-notation">
+    <caption>C melodic minor scale notation on a musical staff (ascending and descending).</caption>
+    <image>
+      <latex-image>
+        <![CDATA[
+\begin{music}
+  \nobarnumbers
+  \setclef10
+  \startextract
+  \notes \qa c \qa d \qa {_e} \qa f \qa g \qa h \qa i \qa j \qa {_i} \qa {_h} \qa g \qa f \qa {_e} \qa d \qa c \en
+  \endextract
+\end{music}
+        ]]>
+      </latex-image>
+    </image>
+  </figure>
+
+  <figure xml:id="fig-intervals-c-melodic-minor-descending-table">
+    <caption>Examples of intervals with notation and semitone counts (C melodic minor scale descending).</caption>
+    <image>
+      <latex-image>
+        <![CDATA[
+\newcommand{\MusiC}[1]{\adjustbox{trim=145pt 0pt 140pt 0pt, valign=c}{%
+  \begin{music}
+    \nobarnumbers
+    \setclef10
+    \startextract
+    \notes #1
+    \endextract
+  \end{music}}}
+
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  Interval & Quality & Notes & On Staff & Number of Semitones & Count\\
+  \hline
+  Second & Major     & C~-~B flat      & \MusiC{\qa j \qa {_i} \en} & 2 & 3\\
+  \hline
+  Second & Major     & B flat~-~A flat & \MusiC{\qa {_i} \qa {_h} \en} & 2 & 3\\
+  \hline
+  Second & Minor     & A flat~-~G      & \MusiC{\qa {_h} \qa g \en} & 1 & 2\\
+  \hline
+  Second & Major     & G~-~F           & \MusiC{\qa g \qa f \en} & 2 & 3\\
+  \hline
+  Second & Major     & F~-~E flat      & \MusiC{\qa f \qa {_e} \en} & 2 & 3\\
+  \hline
+  Second & Major     & E flat~-~D      & \MusiC{\qa {_e} \qa d \en} & 2 & 3\\
+  \hline
+  Second & Major     & D~-~C           & \MusiC{\qa d \qa c \en} & 2 & 3\\
+  \hline
+\end{tabular}
+        ]]>
+      </latex-image>
+    </image>
+  </figure>
+
+</section>

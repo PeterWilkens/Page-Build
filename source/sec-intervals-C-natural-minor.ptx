@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-intervals-c-natural-minor-ascending" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Example of intervals. Ascending C Natural Minor Scale</title>
+<section xml:id="sec-intervals-c-natural-minor" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>C Natural Minor Scale</title>
 
-  <p>In a C Natural Minor Scale, the interval pattern differs from the major scale in that the third, sixth, and seventh scale degrees are lowered.</p>
-  <p>All Natural Minor Scales follow the same interval pattern, so any Natural Minor scale can be built by using this pattern of major and minor seconds.</p>
+  <p>In C natural minor, the interval pattern differs from the major scale in that the third, sixth, and seventh scale degrees are lowered.</p>
+  <p>All natural minor scales follow the same interval pattern, so any natural minor scale can be built by using this pattern of major and minor seconds.</p>
+  <p>The C natural minor scale notes are C, D, E<flat/>, F, G, A<flat/>, B<flat/>, and C.</p>
 
-  <p>A Natural Minor Scale is the Relative Minor of C Major. The A Minor Natural Scale uses these same notes, the sixth note of the major scale becoming the root note of the relative minor.
+  <p>A natural minor scale is the relative minor of a major scale. The A minor natural scale uses these same notes, the sixth note of the major scale becoming the root note of the relative minor.
 ie.) the notes of the A Minor Natural Scale are A, B, C, D, E, F, G and A.</p>
-<p>The C Minor Natural notes are C, D, E<flat/>, F, G, A<flat/>, B<flat/> and C.</p>
-<p> C Minor Natural is the Relative Minor of E<flat/>Major. <!--(See Circle of Fifths for all Scale relationships.  (<xref ref="circle-of-fifths" text="type-global" />)--></p>
+<p>C minor natural is the relative minor of E<flat/> major. <!--(See Circle of Fifths for all Scale relationships.  (<xref ref="circle-of-fifths" text="type-global" />)--></p>
   <figure xml:id="fig-c-natural-minor-scale-notation">
     <caption>C natural minor scale notation on a musical staff (ascending and descending).</caption>
     <image>
@@ -28,7 +28,7 @@ ie.) the notes of the A Minor Natural Scale are A, B, C, D, E, F, G and A.</p>
   </figure>
 
   <figure xml:id="fig-intervals-c-natural-minor-ascending-table">
-    <caption>Examples of intervals with notation and semitone counts (ascending C natural minor).</caption>
+    <caption>Examples of intervals with notation and semitone counts (C natural minor scale ascending).</caption>
     <image>
       <latex-image>
         <![CDATA[
