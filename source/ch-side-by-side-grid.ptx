@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-side-by-side-grid" xmlns:xi="http://www.w3.org/2001/XInclude">
+ 
+    <title>Interval Grid</title> 
+  <figure xml:id="fig-intervals-grid">
+    <caption>Interval shapes on treble keyboard</caption>
+    <image>
+      <latex-image>
+  
+
+\centering
+
+% User-adjustable parameters
+\pgfmathsetmacro{\isoangle}{60} % theta
+\pgfmathsetmacro{\vv}{4} % # vertical segments 
+\pgfmathsetmacro{\hh}{14} % # horizontal segments 
+\pgfmathsetmacro{\vlen}{2} % v
+
+% Set up for isometric grid
+\pgfmathsetmacro{\ang}{\isoangle/2} 
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmax}{\hh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+
+\begin{tikzpicture}
+
+    \begin{scope}
+        % set drawing region (clipped outside)
+        \path[clip] (0,0) rectangle (\xmax,\ymax);
+    
+        % interior vertical lines
+        \pgfmathsetmacro{\ii}{\hh-1}
+        \foreach \i in {1,...,\ii} {
+          \draw (\i*\hlen,0) -- ++(0,\ymax);
+        }
+
+        % Rightward lines from bottom and top
+        \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+        \foreach \i in {0,2,...,\hh} {
+            \draw (\i*\hlen,0) -- ++(\ang:\dvlen); 
+            \draw (\i*\hlen,\ymax) -- ++(-\ang:\dvlen); 
+        }
+
+        % Lines from left side
+        \pgfmathsetmacro{\jj}{\vv-1}
+        \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+        \foreach \j in {1,...,\jj} {
+            \draw (0,\j*\vlen) -- ++(\ang:\dhlen); 
+            \draw (0,\j*\vlen) -- ++(-\ang:\dhlen); 
+        }
+    \end{scope}
+    
+    % outline
+   
+    \draw[gray,thin] rectangle (\xmax,\ymax);	
+
+    % labeling intersections
+    \foreach \i in {0,1,...,\hh} {
+      \pgfmathsetmacro{\jj}{mod(\i,2)==0?\vv:\vv-1}
+        \pgfmathsetmacro{\ff}{mod(\i,2)==0?0:\vlen/2}
+        \foreach \j in {0,1,...,\jj} {
+            \path (\i*\hlen,\j*\vlen+\ff) 
+            coordinate (I-\i-\j);
+            %\node[overlay,fill=white] at (I-\i-\j){I-\i-\j};
+    }}
+
+    % Draw Isometric Axes
+   % \begin{scope}[shift=(I-3-2), every path/.style={blue, thin, ->}, every node/.append style={pos=1.25, fill=white}]
+      %  \draw (0,0) -- (90:2) node {$z$};
+       % \draw (0,0) -- ++(-\ang:2) node {$x$};
+       % \draw (0,0) -- ++(180+\ang:2) node {$y$};
+    %\end{scope}
+
+\end{tikzpicture}
+
+        </latex-image>
+      </image>
+    </figure>
+ </chapter>

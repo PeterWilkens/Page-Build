@@ -2,12 +2,13 @@
 
 <chapter xml:id="ch-scales" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Scales</title>
-  <p> There are a number of different scale types eg; Major, Minor, Diminished etc;. Different Scale Types are characterised by the interval between each successive  note. A Major Scale has a sequence of whole tone, whole tone, half tone, whole tone,whole tone, whole tone, half tone between the tonic notes.</p>
-    <p> The interval structure of each of the main scale types will be discussed in the following sections of Chapter 3.</p>
-  <section xml:id="sec-scales-introduction">
-    <title>Scales</title>
+  <introduction>
     <p> There are a number of different scale types eg; Major, Minor, Diminished etc;. Different Scale Types are characterised by the interval between each successive  note. A Major Scale has a sequence of whole tone, whole tone, half tone, whole tone,whole tone, whole tone, half tone between the tonic notes.</p>
     <p> The interval structure of each of the main scale types will be discussed in the following sections of Chapter 3.</p>
+  </introduction>
+  <section xml:id="sec-scales-introduction">
+    <title>Introduction</title>
+    <p>In this chapter we compare major and minor scale forms by interval pattern and keyboard shape.</p>
   </section>
 
   <!-- include sections -->
