@@ -77,8 +77,8 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="My Great Book">
-<meta property="book:author" content="You">
+<meta property="book:title" content="Intervals">
+<meta property="book:author" content="Peter Wilkens">
 <script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -101,22 +101,22 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.18';
+eBookConfig.runestone_version = '7.11.19';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.1d92cd109bc12c4d.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.74f6fa0c85f09c79.css">
+<script src="_static/prefix-runtime.998c9d9ee2a5e7ac.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.98ef3b0c170cd180.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">My Great Book</span> <span class="subtitle">An example to get you started</span></a></h1>
-<p class="byline">You</p>
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Intervals</span> <span class="subtitle">For adding to complete book</span></a></h1>
+<p class="byline">Peter Wilkens</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
@@ -146,11 +146,17 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-intervals.html" class="internal"><span class="codenumber">2</span> <span class="title">Intervals</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-introduction.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Intervals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-scales.html" class="internal"><span class="codenumber">3</span> <span class="title">Scales</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-major-scale.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Example of intervals. C Major Scale</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-natural-minor-ascending.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Example of intervals. Ascending C Natural Minor Scale</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-harmonic-minor-ascending.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Example of intervals, with count and notation in an ascending C Melodic Minor scale</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Example of intervals,with count and notation in a descending C Melodic Minor Scale</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-scales-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Scales</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-major-scale.html" class="internal"><span class="codenumber">3.2</span> <span class="title">C Major Scale</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-natural-minor.html" class="internal"><span class="codenumber">3.3</span> <span class="title">C Natural Minor Scale</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-harmonic-minor-scale.html" class="internal"><span class="codenumber">3.4</span> <span class="title">C Harmonic Minor Scale</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-melodic-minor-ascending.html" class="internal"><span class="codenumber">3.5</span> <span class="title">C Melodic Minor Scale (Ascending)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-intervals-c-melodic-minor-descending.html" class="internal"><span class="codenumber">3.6</span> <span class="title">C Melodic Minor Scale (Descending)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
@@ -159,7 +165,7 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Colophon</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Colophon</span>
 </h2>
 <div class="credit">
-<b class="title">Website</b> <a class="external" href="https://pretextbook.org" target="_blank">My Website</a>
+<b class="title">Website</b> <a class="external" href="https://pretextbook.org" target="_blank">https://fantastic-space-palm-tree-g45qr4wg74953xg7-8128.app.github.dev/output/web/frontmatter.html</a>
 </div>
 <div class="para copyright">©2020–2024 You</div>
 <div class="para license">This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <a class="external" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CreativeCommons.org</a>
