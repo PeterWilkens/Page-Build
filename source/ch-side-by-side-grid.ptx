@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<chapter xml:id="ch-side-by-side-grid" xmlns:xi="http://www.w3.org/2001/XInclude">
- 
-    <title>Interval Grid</title> 
-  <figure xml:id="fig-intervals-grid">
-    <caption>Interval shapes on treble keyboard</caption>
-    <image>
-      <latex-image>
-  
-
-\centering
-
+<section xml:id="ch-side-by-side-grid" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Iso Grid Side by Side</title>
+        <p>
+            Basic isometric grid for entering chords and intervals.
+        </p>
+        
+        <figure xml:id="fig-side-by-side-grid">
+            <caption>Basic grid.
+            </caption>
+            <image xml:id="img-iso-grid">
+                <latex-image>
+\begin{tikzpicture}
 % User-adjustable parameters
 \pgfmathsetmacro{\isoangle}{60} % theta
-\pgfmathsetmacro{\vv}{4} % # vertical segments 
-\pgfmathsetmacro{\hh}{14} % # horizontal segments 
-\pgfmathsetmacro{\vlen}{2} % v
+\pgfmathsetmacro{\vv}{14} % # vertical segments 
+\pgfmathsetmacro{\hh}{6} % # horizontal segments 
+\pgfmathsetmacro{\vlen}{1.5} % vertical length
 
 % Set up for isometric grid
 \pgfmathsetmacro{\ang}{\isoangle/2} 
@@ -23,59 +23,214 @@
 \pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
 \pgfmathsetmacro{\xmax}{\hh*\hlen}
 \pgfmathsetmacro{\ymax}{\vv*\vlen}
-
-\begin{tikzpicture}
+\pgfmathsetmacro{\xoffset}{\xmax + 0.8}
 
     \begin{scope}
         % set drawing region (clipped outside)
         \path[clip] (0,0) rectangle (\xmax,\ymax);
-    
+
         % interior vertical lines
         \pgfmathsetmacro{\ii}{\hh-1}
         \foreach \i in {1,...,\ii} {
-          \draw (\i*\hlen,0) -- ++(0,\ymax);
+          \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
         }
 
         % Rightward lines from bottom and top
         \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
         \foreach \i in {0,2,...,\hh} {
-            \draw (\i*\hlen,0) -- ++(\ang:\dvlen); 
-            \draw (\i*\hlen,\ymax) -- ++(-\ang:\dvlen); 
+            \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen); 
+            \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen); 
         }
 
         % Lines from left side
         \pgfmathsetmacro{\jj}{\vv-1}
         \pgfmathsetmacro{\dhlen}{\hh*\dlen}
         \foreach \j in {1,...,\jj} {
-            \draw (0,\j*\vlen) -- ++(\ang:\dhlen); 
-            \draw (0,\j*\vlen) -- ++(-\ang:\dhlen); 
+           \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen); 
+            \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen); 
         }
     \end{scope}
-    
-    % outline
-   
-    \draw[gray,thin] rectangle (\xmax,\ymax);	
 
-    % labeling intersections
-    \foreach \i in {0,1,...,\hh} {
-      \pgfmathsetmacro{\jj}{mod(\i,2)==0?\vv:\vv-1}
-        \pgfmathsetmacro{\ff}{mod(\i,2)==0?0:\vlen/2}
-        \foreach \j in {0,1,...,\jj} {
-            \path (\i*\hlen,\j*\vlen+\ff) 
-            coordinate (I-\i-\j);
-            %\node[overlay,fill=white] at (I-\i-\j){I-\i-\j};
+    % outline
+    %\draw[lightgray,very thin] rectangle (\xmax,\ymax);	
+
+    % Label intersection coordinates
+\foreach \i in {0,1,...,\hh} {
+    \pgfmathsetmacro{\jj}{mod(\i,2)==0?\vv:\vv-1}
+    \pgfmathsetmacro{\ff}{mod(\i,2)==0?0:\vlen/2}
+    \foreach \j in {0,1,...,\jj} {
+        \path (\i*\hlen,\j*\vlen+\ff) coordinate (I-\i-\j);
     }}
 
-    % Draw Isometric Axes
-   % \begin{scope}[shift=(I-3-2), every path/.style={blue, thin, ->}, every node/.append style={pos=1.25, fill=white}]
-      %  \draw (0,0) -- (90:2) node {$z$};
-       % \draw (0,0) -- ++(-\ang:2) node {$x$};
-       % \draw (0,0) -- ++(180+\ang:2) node {$y$};
-    %\end{scope}
+    % Label notes on grid
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (I-5-1.5) {C};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-2) {C$\sharp$, D$\flat$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-2.5) {D};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-3) {E$\flat$, D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (I-1-3.5) {E};
 
-\end{tikzpicture}
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-2.5) {E$\flat$,D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-3) {E};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (I-3-3.5) {F};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-4) {G$\flat$, F$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-4.5) {G};
 
-        </latex-image>
-      </image>
-    </figure>
- </chapter>
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-3.5) {G$\flat$, F$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-4) {G};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-4) {A$\flat$, G$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-5) {A};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-5.5) {B$\flat$, A$\sharp$};
+
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-4.5) {A};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-5) {B$\flat$,A$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-5.5) {B};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-6) {C};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-6.5) {C$\sharp$,D$\flat$};
+
+   \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-5.5) {C};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-6) {C$\sharp$,D$\flat$};
+   \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-6.5) {D};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-7) {E$\flat$,D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-7.5){E};
+
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-6.5) {E$\flat$,D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-7) {E};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-7) {F};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-8) {G$\flat$,F$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-8.5) {G};
+   
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-7.5) {G$\flat$,F$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-8) {G};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-8.5) {A$\flat$, G$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-9) {A};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-9.5) {B$\flat$, A$\sharp$};
+
+    % New row above previous top row
+
+    % Move previous top 2 lines down by 1
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-8.5) {A};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-9) {B$\flat$,A$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-9.5) {B};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-10) {C};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-10.5) {C$\sharp$,D$\flat$};
+
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-9.5) {C};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-10) {C$\sharp$,D$\flat$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-10.5) {D};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-11) {E$\flat$,D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-11.5) {E};
+
+    % Add a new line at the top with the next sequence
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-5-10.5) {E$\flat$,D$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-4-11) {E};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-3-11.5) {F};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-2-12) {G$\flat$,F$\sharp$};
+    \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (I-1-12.5) {G};
+%\draw[thick,](-1,0)--(-1,11);
+
+    % Second populated grid, shifted to the right
+    \begin{scope}[xshift=\xoffset cm]
+        % set drawing region (clipped outside)
+        \path[clip] (0,0) rectangle (\xmax,\ymax);
+
+        % interior vertical lines
+        \pgfmathsetmacro{\ii}{\hh-1}
+        \foreach \i in {1,...,\ii} {
+          \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+        }
+
+        % Rightward lines from bottom and top
+        \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+        \foreach \i in {0,2,...,\hh} {
+            \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen);
+            \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+        }
+
+        % Lines from left side
+        \pgfmathsetmacro{\jj}{\vv-1}
+        \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+        \foreach \j in {1,...,\jj} {
+            \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+            \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+        }
+
+        % Label intersection coordinates
+        \foreach \i in {0,1,...,\hh} {
+            \pgfmathsetmacro{\jj}{mod(\i,2)==0?\vv:\vv-1}
+            \pgfmathsetmacro{\ff}{mod(\i,2)==0?0:\vlen/2}
+            \foreach \j in {0,1,...,\jj} {
+                \path (\i*\hlen,\j*\vlen+\ff) coordinate (J-\i-\j);
+            }}
+
+        % Label notes on grid
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (J-5-1.5) {C};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-2) {C$\sharp$, D$\flat$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-2.5) {D};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-3) {E$\flat$, D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (J-1-3.5) {E};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-2.5) {E$\flat$,D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-3) {E};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (J-3-3.5) {F};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-4) {G$\flat$, F$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-4.5) {G};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-3.5) {G$\flat$, F$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-4) {G};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-4) {A$\flat$, G$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-5) {A};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-5.5) {B$\flat$, A$\sharp$};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-4.5) {A};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-5) {B$\flat$,A$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-5.5) {B};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-6) {C};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-6.5) {C$\sharp$,D$\flat$};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-5.5) {C};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-6) {C$\sharp$,D$\flat$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-6.5) {D};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-7) {E$\flat$,D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-7.5){E};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-6.5) {E$\flat$,D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-7) {E};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-7) {F};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-8) {G$\flat$,F$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-8.5) {G};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-7.5) {G$\flat$,F$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-8) {G};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-8.5) {A$\flat$, G$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-9) {A};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-9.5) {B$\flat$, A$\sharp$};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-8.5) {A};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-9) {B$\flat$,A$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-9.5) {B};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-10) {C};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-10.5) {C$\sharp$,D$\flat$};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-9.5) {C};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-10) {C$\sharp$,D$\flat$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-10.5) {D};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-11) {E$\flat$,D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-11.5) {E};
+
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-5-10.5) {E$\flat$,D$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-4-11) {E};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-3-11.5) {F};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-2-12) {G$\flat$,F$\sharp$};
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt,minimum size=40pt] at (J-1-12.5) {G};
+
+    \end{scope}
+
+
+    \end{tikzpicture}
+                
+
+</latex-image>
+            </image>
+
+        </figure>
+    </section>

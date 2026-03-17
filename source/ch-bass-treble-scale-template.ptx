@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-bass-treble-scale-template" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Bass/Treble Scale Template</title>
+  <introduction>
+    <p>
+      Extended side-by-side isometric grids: bass-hand (6 columns, left two blank) and
+      treble-hand (right), each carrying 10 rows of the chromatic note sequence.
+    </p>
+  </introduction>
+
+  <figure xml:id="fig-bass-treble-scale-template">
+    <caption>Bass-hand scale template (left) and treble-hand scale template (right).</caption>
+    <image xml:id="img-bass-treble-scale-template">
+      <latex-image>
+\begin{tikzpicture}[scale=0.75, transform shape]
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vv}{14}
+% LH: 8 segments gives 6 interior node columns (1-6) comfortably inside clip
+\pgfmathsetmacro{\hhlh}{8}
+% RH: 8 segments (even number ensures diagonals reach right edge); cols 1-5 used
+\pgfmathsetmacro{\hhrh}{8}
+\pgfmathsetmacro{\vlen}{1.5}
+\pgfmathsetmacro{\ang}{\isoangle/2}
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmaxlh}{\hhlh*\hlen}
+\pgfmathsetmacro{\xmaxrh}{\hhrh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+\pgfmathsetmacro{\belx}{\xmaxlh+0.15}
+\pgfmathsetmacro{\xrh}{\xmaxlh+0.3}
+\pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+\pgfmathsetmacro{\jj}{\vv-1}
+
+%% ── LH bass grid (7 segments, 6 node columns; notes in cols 1–4, cols 5–6 blank) ──
+\begin{scope}
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmaxlh,\ymax);
+    \pgfmathsetmacro{\iilh}{\hhlh-1}
+    \foreach \i in {1,...,\iilh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+    \foreach \i in {0,2,...,\hhlh} {
+      \draw[lightgray,very thin] (\i*\hlen,0)     -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+    \pgfmathsetmacro{\dhlen}{\hhlh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+  \node[anchor=west, font=\bfseries\small] at (0.25*\hlen,13.5*\vlen) {Bass Hand (LH)};
+
+  % Row 1  (cols 1-4 populated, cols 5-6 blank)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,1.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,2.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,2.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,3.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,3.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,4.0*\vlen) {};
+  % Row 2
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,2.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,3.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,3.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,4.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,4.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,5.0*\vlen) {};
+  % Row 3
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,3.5*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,4.0*\vlen) {G};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,4.5*\vlen) {A$\flat$, G$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,5.0*\vlen) {A};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,5.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,6.0*\vlen) {};
+  % Row 4
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,4.5*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,5.0*\vlen) {B$\flat$, A$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,5.5*\vlen) {B};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,6.0*\vlen) {C};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,6.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,7.0*\vlen) {};
+  % Row 5
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,5.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,6.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,6.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,7.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,7.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,8.0*\vlen) {};
+  % Row 6
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,6.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,7.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,7.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,8.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,8.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,9.0*\vlen) {};
+  % Row 7 (+1)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,7.5*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,8.0*\vlen) {G};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,8.5*\vlen) {A$\flat$, G$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,9.0*\vlen) {A};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,9.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,10.0*\vlen) {};
+  % Row 8 (+2)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,8.5*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,9.0*\vlen) {B$\flat$, A$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,9.5*\vlen) {B};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,10.0*\vlen) {C};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,10.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,11.0*\vlen) {};
+  % Row 9 (+3)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,9.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,10.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,10.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,11.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,11.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,12.0*\vlen) {};
+  % Row 10 (+4)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,10.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,11.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,11.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,12.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (5*\hlen,12.5*\vlen) {};
+  \node[circle,draw=gray,inner sep=1pt,minimum size=40pt] at (6*\hlen,13.0*\vlen) {};
+\end{scope}
+
+%% ── RH treble grid (6 segments, 5 note columns, mirrored direction) ──
+\begin{scope}[xshift=\xrh cm]
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmaxrh,\ymax);
+    \pgfmathsetmacro{\iirh}{\hhrh-1}
+    \foreach \i in {1,...,\iirh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+    \foreach \i in {0,2,...,\hhrh} {
+      \draw[lightgray,very thin] (\i*\hlen,0)     -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+    \pgfmathsetmacro{\dhlen}{\hhrh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+  \node[anchor=east, font=\bfseries\small] at (7.75*\hlen,13.5*\vlen) {Treble Hand (RH)};
+
+  % Row 1
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,1.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,2.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,2.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,3.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,3.5*\vlen) {E};
+  % Row 2
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,2.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,3.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,3.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,4.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,4.5*\vlen) {G};
+  % Row 3
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,3.5*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,4.0*\vlen) {G};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,4.5*\vlen) {A$\flat$, G$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,5.0*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,5.5*\vlen) {B$\flat$, A$\sharp$};
+  % Row 4
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,4.5*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,5.0*\vlen) {B$\flat$, A$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,5.5*\vlen) {B};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,6.0*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,6.5*\vlen) {C$\sharp$, D$\flat$};
+  % Row 5
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,5.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,6.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,6.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,7.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,7.5*\vlen) {E};
+  % Row 6
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,6.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,7.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,7.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,8.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,8.5*\vlen) {G};
+  % Row 7 (+1)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,7.5*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,8.0*\vlen) {G};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,8.5*\vlen) {A$\flat$, G$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,9.0*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,9.5*\vlen) {B$\flat$, A$\sharp$};
+  % Row 8 (+2)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,8.5*\vlen) {A};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,9.0*\vlen) {B$\flat$, A$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,9.5*\vlen) {B};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,10.0*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,10.5*\vlen) {C$\sharp$, D$\flat$};
+  % Row 9 (+3)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,9.5*\vlen) {C};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,10.0*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,10.5*\vlen) {D};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,11.0*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,11.5*\vlen) {E};
+  % Row 10 (+4)
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (5*\hlen,10.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (4*\hlen,11.0*\vlen) {E};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (3*\hlen,11.5*\vlen) {F};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (2*\hlen,12.0*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (1*\hlen,12.5*\vlen) {G};
+\end{scope}
+
+% Bellows separator — five gray!40 vertical lines 0.15cm apart with legend
+\pgfmathsetmacro{\belbot}{1.0*\vlen}
+\pgfmathsetmacro{\beltop}{13.5*\vlen}
+\draw[gray!40, very thick] (\belx-0.60, \belbot) -- (\belx-0.60, \beltop);
+\draw[gray!40, very thick] (\belx-0.45, \belbot) -- (\belx-0.45, \beltop);
+\draw[gray!40, very thick] (\belx-0.30, \belbot) -- (\belx-0.30, \beltop);
+\draw[gray!40, very thick] (\belx-0.15, \belbot) -- (\belx-0.15, \beltop);
+\draw[gray!40, very thick] (\belx,      \belbot) -- (\belx,      \beltop);
+\node[font=\small, black] at (\belx-0.30, 0.5*\vlen) {Bellows};
+
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+</chapter>

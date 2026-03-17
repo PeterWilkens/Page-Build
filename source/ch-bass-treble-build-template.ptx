@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-bass-treble-build-template" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Bass/Treble Build Template</title>
+  <introduction>
+    <p>
+      Side-by-side isometric grids for sketching bass-hand and treble-hand note layouts.
+    </p>
+  </introduction>
+
+  <figure xml:id="fig-bass-treble-build-template">
+    <caption>Bass-hand template (left) and treble-hand template (right).</caption>
+    <image xml:id="img-bass-treble-build-template">
+      <latex-image>
+\begin{tikzpicture}[scale=0.85, transform shape]
+% User-adjustable parameters
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vv}{12}
+\pgfmathsetmacro{\hh}{6}
+\pgfmathsetmacro{\vlen}{1.5}
+
+% Isometric setup
+\pgfmathsetmacro{\ang}{\isoangle/2}
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmax}{\hh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+\pgfmathsetmacro{\xoffset}{\xmax + 0.9}
+\pgfmathsetmacro{\leftshift}{0.3}
+\pgfmathsetmacro{\rightshift}{\leftshift + \xoffset}
+
+\newcommand{\drawisogrid}{
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmax,\ymax);
+
+    \pgfmathsetmacro{\ii}{\hh-1}
+    \foreach \i in {1,...,\ii} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+
+    \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+    \foreach \i in {0,2,...,\hh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+
+    \pgfmathsetmacro{\jj}{\vv-1}
+    \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+}
+
+\newcommand{\templatenode}[3]{
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=36pt] at (#1*\hlen,#2*\vlen) {#3};
+}
+
+% Left grid: bass-hand build template (mirrored from RH note direction)
+\begin{scope}[xshift=\leftshift cm]
+  \drawisogrid
+
+  \node[anchor=west, font=\bfseries\small] at (0.35*\hlen,11.2*\vlen) {Bass Hand (LH)};
+
+  	\templatenode{1}{1.5}{C}
+  	\templatenode{2}{2.0}{C$\sharp$, D$\flat$}
+  	\templatenode{3}{2.5}{D}
+  	\templatenode{4}{3.0}{E$\flat$, D$\sharp$}
+  	\templatenode{5}{3.5}{E}
+
+  	\templatenode{1}{2.5}{E$\flat$, D$\sharp$}
+  	\templatenode{2}{3.0}{E}
+  	\templatenode{3}{3.5}{F}
+  	\templatenode{4}{4.0}{G$\flat$, F$\sharp$}
+  	\templatenode{5}{4.5}{G}
+
+  	\templatenode{1}{3.5}{G$\flat$, F$\sharp$}
+  	\templatenode{2}{4.0}{G}
+  	\templatenode{3}{4.5}{A$\flat$, G$\sharp$}
+  	\templatenode{4}{5.0}{A}
+  	\templatenode{5}{5.5}{B$\flat$, A$\sharp$}
+
+  	\templatenode{1}{4.5}{A}
+  	\templatenode{2}{5.0}{B$\flat$, A$\sharp$}
+  	\templatenode{3}{5.5}{B}
+  	\templatenode{4}{6.0}{C}
+  	\templatenode{5}{6.5}{C$\sharp$, D$\flat$}
+
+  	\templatenode{1}{5.5}{C}
+  	\templatenode{2}{6.0}{C$\sharp$, D$\flat$}
+  	\templatenode{3}{6.5}{D}
+  	\templatenode{4}{7.0}{E$\flat$, D$\sharp$}
+  	\templatenode{5}{7.5}{E}
+
+  	\templatenode{1}{6.5}{E$\flat$, D$\sharp$}
+  	\templatenode{2}{7.0}{E}
+  	\templatenode{3}{7.5}{F}
+  	\templatenode{4}{8.0}{G$\flat$, F$\sharp$}
+  	\templatenode{5}{8.5}{G}
+\end{scope}
+
+% Right grid: treble-hand template (full side-by-side style note sequence)
+\begin{scope}[xshift=\rightshift cm]
+  \drawisogrid
+
+  \node[anchor=east, font=\bfseries\small] at (5.65*\hlen,11.2*\vlen) {Treble Hand (RH)};
+
+  \templatenode{5}{1.5}{C}
+  \templatenode{4}{2.0}{C$\sharp$, D$\flat$}
+  \templatenode{3}{2.5}{D}
+  \templatenode{2}{3.0}{E$\flat$, D$\sharp$}
+  \templatenode{1}{3.5}{E}
+
+  \templatenode{5}{2.5}{E$\flat$, D$\sharp$}
+  \templatenode{4}{3.0}{E}
+  \templatenode{3}{3.5}{F}
+  \templatenode{2}{4.0}{G$\flat$, F$\sharp$}
+  \templatenode{1}{4.5}{G}
+
+  \templatenode{5}{3.5}{G$\flat$, F$\sharp$}
+  \templatenode{4}{4.0}{G}
+  \templatenode{3}{4.5}{A$\flat$, G$\sharp$}
+  \templatenode{2}{5.0}{A}
+  \templatenode{1}{5.5}{B$\flat$, A$\sharp$}
+
+  \templatenode{5}{4.5}{A}
+  \templatenode{4}{5.0}{B$\flat$, A$\sharp$}
+  \templatenode{3}{5.5}{B}
+  \templatenode{2}{6.0}{C}
+  \templatenode{1}{6.5}{C$\sharp$, D$\flat$}
+
+  \templatenode{5}{5.5}{C}
+  \templatenode{4}{6.0}{C$\sharp$, D$\flat$}
+  \templatenode{3}{6.5}{D}
+  \templatenode{2}{7.0}{E$\flat$, D$\sharp$}
+  \templatenode{1}{7.5}{E}
+
+  \templatenode{5}{6.5}{E$\flat$, D$\sharp$}
+  \templatenode{4}{7.0}{E}
+  \templatenode{3}{7.5}{F}
+  \templatenode{2}{8.0}{G$\flat$, F$\sharp$}
+  \templatenode{1}{8.5}{G}
+\end{scope}
+
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+</chapter>

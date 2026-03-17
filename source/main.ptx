@@ -18,6 +18,9 @@
     <xi:include href="./ch-intervals.ptx" />
     <xi:include href="./ch-scales.ptx" />
 <xi:include href="./ch-side-by-side-grid.ptx" />
+    <xi:include href="./ch-four-chord-grids.ptx" />
+    <xi:include href="./ch-bass-treble-build-template.ptx" />
+    <xi:include href="./ch-bass-treble-scale-template.ptx" />
     <!-- Include backmatter-->
     <xi:include href="./backmatter.ptx" />
 

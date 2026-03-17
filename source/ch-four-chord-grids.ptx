@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-four-chord-grids" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Four-Chord-Grids</title>
+  <introduction>
+    <p>Four split isometric chord grids with matching note sequences.</p>
+  </introduction>
+
+  <figure xml:id="fig-four-chord-grids">
+    <caption>Four split chord grids with C through A on the right column.</caption>
+    <image xml:id="img-four-chord-grids">
+      <latex-image>
+\begin{tikzpicture}[scale=0.66, transform shape]
+% Grid parameters (split-height version of the side-by-side grid)
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vv}{8}
+\pgfmathsetmacro{\hh}{6}
+\pgfmathsetmacro{\vlen}{1.5}
+
+\pgfmathsetmacro{\ang}{\isoangle/2}
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmax}{\hh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+\pgfmathsetmacro{\xoffset}{\xmax + 1.0}
+\pgfmathsetmacro{\yoffset}{\ymax + 1.6}
+
+\newcommand{\drawgridandnotes}{
+  % Grid lines
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmax,\ymax);
+
+    \pgfmathsetmacro{\ii}{\hh-1}
+    \foreach \i in {1,...,\ii} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+
+    \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+    \foreach \i in {0,2,...,\hh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+
+    \pgfmathsetmacro{\jj}{\vv-1}
+    \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+
+  % Rows with right column C to A and sequence carried leftward
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,1.5*\vlen) {C};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,2*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,2.5*\vlen) {D};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,3*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,3.5*\vlen) {E};
+
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,2.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,3*\vlen) {E};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,3.5*\vlen) {F};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,4*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,4.5*\vlen) {G};
+
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,3.5*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,4*\vlen) {G};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,4.5*\vlen) {A$\flat$, G$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,5*\vlen) {A};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,5.5*\vlen) {B$\flat$, A$\sharp$};
+
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,4.5*\vlen) {A};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,5*\vlen) {B$\flat$, A$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,5.5*\vlen) {B};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,6*\vlen) {C};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,6.5*\vlen) {C$\sharp$, D$\flat$};
+
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,5.5*\vlen) {C};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,6*\vlen) {C$\sharp$, D$\flat$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,6.5*\vlen) {D};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,7*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,7.5*\vlen) {E};
+
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,6.5*\vlen) {E$\flat$, D$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,7*\vlen) {E};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,7.5*\vlen) {F};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,8*\vlen) {G$\flat$, F$\sharp$};
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,8.5*\vlen) {G};
+}
+
+% Bottom-left
+\begin{scope}[shift={(0,0)}]
+  \drawgridandnotes
+\end{scope}
+
+% Bottom-right
+\begin{scope}[shift={(\xoffset,0)}]
+  \drawgridandnotes
+\end{scope}
+
+% Top-left
+\begin{scope}[shift={(0,\yoffset)}]
+  \drawgridandnotes
+\end{scope}
+
+% Top-right
+\begin{scope}[shift={(\xoffset,\yoffset)}]
+  \drawgridandnotes
+\end{scope}
+
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+</chapter>
