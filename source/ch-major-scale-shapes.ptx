@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-major-scale-shapes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Major Scale Shapes</title>
+  <introduction>
+    <p>
+      The following scale shapes are illustrated for both bass and treble hands and are built on C, D and G in each of the three outermost columns. The scale name is given by the first note, but each scale shape may be moved anywhere on the keyboard where it fits, and the scale will take the name of the first note in the new position.
+    </p>
+  </introduction>
+  <xi:include href="sec-C-scale-shape.ptx" />
+  <xi:include href="sec-D-scale-shape.ptx" />
+  <xi:include href="sec-G-scale-shape.ptx" />
+</chapter>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-minor-scale-shapes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Minor Scale Shapes</title>
+  <introduction>
+    <p>
+      This chapter collects melodic minor and harmonic minor scale shape templates.
+    </p>
+  </introduction>
+  <xi:include href="sec-melodic-minor-scale-shape.ptx" />
+  <xi:include href="sec-harmonic-minor-scale-shape.ptx" />
+</chapter>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-scale-coordinates-grid" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Scale Coordinates Grid</title>
+  <introduction>
+    <p>
+      Extended side-by-side isometric grids: bass-hand (6 columns) and treble-hand (5 columns),
+      with each node labeled by its coordinate identifier.
+    </p>
+  </introduction>
+
+  <section xml:id="sec-scale-coordinates-grid-main">
+    <title>Coordinate Templates</title>
+
+    <figure xml:id="fig-scale-coordinates-grid">
+      <caption>Bass-hand coordinate grid (left) and treble-hand coordinate grid (right).</caption>
+      <image xml:id="img-scale-coordinates-grid">
+        <latex-image>
+\begin{tikzpicture}[scale=0.75, transform shape]
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vv}{14}
+\pgfmathsetmacro{\hhlh}{8}
+\pgfmathsetmacro{\hhrh}{8}
+\pgfmathsetmacro{\vlen}{1.5}
+\pgfmathsetmacro{\ang}{\isoangle/2}
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmaxlh}{\hhlh*\hlen}
+\pgfmathsetmacro{\xmaxrh}{\hhrh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+\pgfmathsetmacro{\belx}{\xmaxlh+0.15}
+\pgfmathsetmacro{\xrh}{\xmaxlh+0.3}
+\pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+\pgfmathsetmacro{\jj}{\vv-1}
+
+\newcommand{\coordnode}[3]{
+  \node[circle,draw=gray,fill=gray!10,inner sep=1pt,minimum size=40pt] at (#2*\hlen,#3*\vlen) {\scriptsize #1-#2-#3};
+}
+
+%% LH bass grid
+\begin{scope}
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmaxlh,\ymax);
+    \pgfmathsetmacro{\iilh}{\hhlh-1}
+    \foreach \i in {1,...,\iilh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+    \foreach \i in {0,2,...,\hhlh} {
+      \draw[lightgray,very thin] (\i*\hlen,0)     -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+    \pgfmathsetmacro{\dhlen}{\hhlh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+  \node[anchor=west, font=\bfseries\small] at (0.25*\hlen,13.5*\vlen) {Bass Hand (LH)};
+
+  \foreach \r in {0,...,9} {
+    \pgfmathsetmacro{\basey}{1.5 + \r}
+    \foreach \c in {1,...,6} {
+      \pgfmathsetmacro{\yy}{\basey + 0.5*(\c-1)}
+      \coordnode{I}{\c}{\yy}
+    }
+  }
+\end{scope}
+
+%% RH treble grid
+\begin{scope}[xshift=\xrh cm]
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmaxrh,\ymax);
+    \pgfmathsetmacro{\iirh}{\hhrh-1}
+    \foreach \i in {1,...,\iirh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+    \foreach \i in {0,2,...,\hhrh} {
+      \draw[lightgray,very thin] (\i*\hlen,0)     -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+    \pgfmathsetmacro{\dhlen}{\hhrh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+  \node[anchor=east, font=\bfseries\small] at (7.75*\hlen,13.5*\vlen) {Treble Hand (RH)};
+
+  \foreach \r in {0,...,9} {
+    \pgfmathsetmacro{\basey}{1.5 + \r}
+    \foreach \k in {0,...,4} {
+      \pgfmathsetmacro{\x}{5-\k}
+      \pgfmathsetmacro{\yy}{\basey + 0.5*\k}
+      \coordnode{J}{\x}{\yy}
+    }
+  }
+\end{scope}
+
+% Bellows separator
+\pgfmathsetmacro{\belbot}{1.0*\vlen}
+\pgfmathsetmacro{\beltop}{13.5*\vlen}
+\draw[gray!40, very thick] (\belx-0.60, \belbot) -- (\belx-0.60, \beltop);
+\draw[gray!40, very thick] (\belx-0.45, \belbot) -- (\belx-0.45, \beltop);
+\draw[gray!40, very thick] (\belx-0.30, \belbot) -- (\belx-0.30, \beltop);
+\draw[gray!40, very thick] (\belx-0.15, \belbot) -- (\belx-0.15, \beltop);
+\draw[gray!40, very thick] (\belx,      \belbot) -- (\belx,      \beltop);
+\node[font=\small, black] at (\belx-0.30, 0.5*\vlen) {Bellows};
+
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </section>
+</chapter>

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<chapter xml:id="ch-bass-treble-build-template" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Bass/Treble Build Template</title>
+<section xml:id="sec-C-scale-shape" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>C Major Scale</title>
   <introduction>
     <p>
-      Side-by-side isometric grids for sketching bass-hand and treble-hand note layouts.
+      Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.
     </p>
   </introduction>
 
-  <section xml:id="sec-bass-treble-build-template-main">
-    <title>Build Templates</title>
-
-    <figure xml:id="fig-bass-treble-build-template">
-      <caption>Bass-hand template (left) and treble-hand template (right).</caption>
-      <image xml:id="img-bass-treble-build-template">
-        <latex-image>
+  <figure xml:id="fig-C-major-scale-shape">
+    <caption>Bass keyboard (left) and treble keyboard (right) C major scale shape.</caption>
+    <image xml:id="img-C-major-scale-shape">
+      <latex-image>
 \begin{tikzpicture}[scale=0.85, transform shape]
 % User-adjustable parameters
 \pgfmathsetmacro{\isoangle}{60}
@@ -59,50 +56,50 @@
   \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=36pt] at (#1*\hlen,#2*\vlen) {#3};
 }
 
-% Left grid: bass-hand build template (mirrored from RH note direction)
+% Left grid: bass keyboard (LH)
 \begin{scope}[xshift=\leftshift cm]
   \drawisogrid
 
   \node[anchor=west, font=\bfseries\small] at (0.35*\hlen,11.2*\vlen) {Bass Hand (LH)};
 
-  	\templatenode{1}{1.5}{C}
-  	\templatenode{2}{2.0}{C$\sharp$, D$\flat$}
-  	\templatenode{3}{2.5}{D}
-  	\templatenode{4}{3.0}{E$\flat$, D$\sharp$}
-  	\templatenode{5}{3.5}{E}
+  \templatenode{1}{1.5}{C}
+  \templatenode{2}{2.0}{C$\sharp$, D$\flat$}
+  \templatenode{3}{2.5}{D}
+  \templatenode{4}{3.0}{E$\flat$, D$\sharp$}
+  \templatenode{5}{3.5}{E}
 
-  	\templatenode{1}{2.5}{E$\flat$, D$\sharp$}
-  	\templatenode{2}{3.0}{E}
-  	\templatenode{3}{3.5}{F}
-  	\templatenode{4}{4.0}{G$\flat$, F$\sharp$}
-  	\templatenode{5}{4.5}{G}
+  \templatenode{1}{2.5}{E$\flat$, D$\sharp$}
+  \templatenode{2}{3.0}{E}
+  \templatenode{3}{3.5}{F}
+  \templatenode{4}{4.0}{G$\flat$, F$\sharp$}
+  \templatenode{5}{4.5}{G}
 
-  	\templatenode{1}{3.5}{G$\flat$, F$\sharp$}
-  	\templatenode{2}{4.0}{G}
-  	\templatenode{3}{4.5}{A$\flat$, G$\sharp$}
-  	\templatenode{4}{5.0}{A}
-  	\templatenode{5}{5.5}{B$\flat$, A$\sharp$}
+  \templatenode{1}{3.5}{G$\flat$, F$\sharp$}
+  \templatenode{2}{4.0}{G}
+  \templatenode{3}{4.5}{A$\flat$, G$\sharp$}
+  \templatenode{4}{5.0}{A}
+  \templatenode{5}{5.5}{B$\flat$, A$\sharp$}
 
-  	\templatenode{1}{4.5}{A}
-  	\templatenode{2}{5.0}{B$\flat$, A$\sharp$}
-  	\templatenode{3}{5.5}{B}
-  	\templatenode{4}{6.0}{C}
-  	\templatenode{5}{6.5}{C$\sharp$, D$\flat$}
+  \templatenode{1}{4.5}{A}
+  \templatenode{2}{5.0}{B$\flat$, A$\sharp$}
+  \templatenode{3}{5.5}{B}
+  \templatenode{4}{6.0}{C}
+  \templatenode{5}{6.5}{C$\sharp$, D$\flat$}
 
-  	\templatenode{1}{5.5}{C}
-  	\templatenode{2}{6.0}{C$\sharp$, D$\flat$}
-  	\templatenode{3}{6.5}{D}
-  	\templatenode{4}{7.0}{E$\flat$, D$\sharp$}
-  	\templatenode{5}{7.5}{E}
+  \templatenode{1}{5.5}{C}
+  \templatenode{2}{6.0}{C$\sharp$, D$\flat$}
+  \templatenode{3}{6.5}{D}
+  \templatenode{4}{7.0}{E$\flat$, D$\sharp$}
+  \templatenode{5}{7.5}{E}
 
-  	\templatenode{1}{6.5}{E$\flat$, D$\sharp$}
-  	\templatenode{2}{7.0}{E}
-  	\templatenode{3}{7.5}{F}
-  	\templatenode{4}{8.0}{G$\flat$, F$\sharp$}
-  	\templatenode{5}{8.5}{G}
+  \templatenode{1}{6.5}{E$\flat$, D$\sharp$}
+  \templatenode{2}{7.0}{E}
+  \templatenode{3}{7.5}{F}
+  \templatenode{4}{8.0}{G$\flat$, F$\sharp$}
+  \templatenode{5}{8.5}{G}
 \end{scope}
 
-% Right grid: treble-hand template (full side-by-side style note sequence)
+% Right grid: treble keyboard (RH)
 \begin{scope}[xshift=\rightshift cm]
   \drawisogrid
 
@@ -146,8 +143,7 @@
 \end{scope}
 
 \end{tikzpicture}
-        </latex-image>
-      </image>
-    </figure>
-  </section>
-</chapter>
+      </latex-image>
+    </image>
+  </figure>
+</section>

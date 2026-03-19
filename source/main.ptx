@@ -17,10 +17,16 @@
     <xi:include href="./ch-chapter-title.ptx" />
     <xi:include href="./ch-intervals.ptx" />
     <xi:include href="./ch-scales.ptx" />
+<xi:include href="./ch-major-scale-shapes.ptx" />
+    <xi:include href="./ch-minor-scale-shapes.ptx" />
+
+
 <xi:include href="./ch-side-by-side-grid.ptx" />
     <xi:include href="./ch-four-chord-grids.ptx" />
     <xi:include href="./ch-bass-treble-build-template.ptx" />
     <xi:include href="./ch-bass-treble-scale-template.ptx" />
+    <xi:include href="./ch-scale-coordinates-grid.ptx" />
+    
     <!-- Include backmatter-->
     <xi:include href="./backmatter.ptx" />
 

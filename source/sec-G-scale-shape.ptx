@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section xml:id="sec-G-scale-shape" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>C Major Scale</title>
+  <introduction>
+    <p>
+      Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.
+    </p>
+  </introduction>
+
+  <figure xml:id="fig-G-major-scale-shape">
+    <caption>Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.</caption>
+    <image xml:id="img-G-major-scale-shape">
+      <latex-image>
+\begin{tikzpicture}[scale=0.85, transform shape]
+% User-adjustable parameters
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vv}{16}
+\pgfmathsetmacro{\hh}{8}
+\pgfmathsetmacro{\vlen}{1.4}
+
+% Isometric setup
+\pgfmathsetmacro{\ang}{\isoangle/2}
+\pgfmathsetmacro{\dlen}{(\vlen/2) / sin(\ang)}
+\pgfmathsetmacro{\hlen}{(\vlen/2) / tan(\ang)}
+\pgfmathsetmacro{\xmax}{\hh*\hlen}
+\pgfmathsetmacro{\ymax}{\vv*\vlen}
+\pgfmathsetmacro{\xoffset}{\xmax + 0.9}
+\pgfmathsetmacro{\leftshift}{0.3}
+\pgfmathsetmacro{\rightshift}{\leftshift + \xoffset}
+
+\newcommand{\drawisogrid}{
+  \begin{scope}
+    \path[clip] (0,0) rectangle (\xmax,\ymax);
+
+    \pgfmathsetmacro{\ii}{\hh-1}
+    \foreach \i in {1,...,\ii} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+    }
+
+    \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+    \foreach \i in {0,2,...,\hh} {
+      \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen);
+      \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+    }
+
+    \pgfmathsetmacro{\jj}{\vv-1}
+    \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+    \foreach \j in {1,...,\jj} {
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+      \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+    }
+  \end{scope}
+}
+
+\newcommand{\templatenode}[3]{
+  \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=36pt] at (#1*\hlen,#2*\vlen) {#3};
+}
+
+% Left grid: bass keyboard (LH)
+\begin{scope}[xshift=\leftshift cm]
+  \drawisogrid
+
+  \node[anchor=west, font=\bfseries\small] at (0.35*\hlen,12.6*\vlen) {Bass Hand (LH)};
+
+    \templatenode{1}{1.5}{C}
+    \templatenode{2}{2.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{2.5}{D}
+    \templatenode{4}{3.0}{E$\flat$, D$\sharp$}
+    \templatenode{5}{3.5}{A$\flat$, G$\sharp$}
+    \templatenode{6}{4.0}{C}
+
+    \templatenode{1}{2.5}{E$\flat$, D$\sharp$}
+    \templatenode{2}{3.0}{E}
+    \templatenode{3}{3.5}{F}
+    \templatenode{4}{4.0}{G$\flat$, F$\sharp$}
+    \templatenode{5}{4.5}{D$\flat$,C$\sharp$}
+    \templatenode{6}{5.0}{F}
+
+    \templatenode{1}{3.5}{G$\flat$, F$\sharp$}
+    \templatenode{2}{4.0}{G}
+    \templatenode{3}{4.5}{A$\flat$, G$\sharp$}
+    \templatenode{4}{5.0}{A}
+    \templatenode{5}{5.5}{G$\flat$,F$\sharp$}
+    \templatenode{6}{6.0}{B$\flat$, A$\sharp$}
+
+    \templatenode{1}{4.5}{A}
+    \templatenode{2}{5.0}{B$\flat$, A$\sharp$}
+    \templatenode{3}{5.5}{B}
+    \templatenode{4}{6.0}{C}
+    \templatenode{5}{6.5}{B}
+    \templatenode{6}{7.0}{E$\flat$, D$\sharp$}
+
+    \templatenode{1}{5.5}{C}
+    \templatenode{2}{6.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{6.5}{D}
+    \templatenode{4}{7.0}{E$\flat$, D$\sharp$}
+    \templatenode{5}{7.5}{E}
+    \templatenode{6}{8.0}{A$\flat$, G$\sharp$}
+
+    \templatenode{1}{6.5}{E$\flat$, D$\sharp$}
+    \templatenode{2}{7.0}{E}
+    \templatenode{3}{7.5}{F}
+    \templatenode{4}{8.0}{G$\flat$, F$\sharp$}
+    \templatenode{5}{8.5}{A}
+    \templatenode{6}{9.0}{D$\flat$, C$\sharp$}
+
+    \templatenode{1}{7.5}{G$\flat$, F$\sharp$}
+    \templatenode{2}{8.0}{G}
+    \templatenode{3}{8.5}{A$\flat$, G$\sharp$}
+    \templatenode{4}{9.0}{A}
+    \templatenode{5}{9.5}{D}
+    \templatenode{6}{10.0}{G$\flat$, F$\sharp$}
+
+    \templatenode{1}{8.5}{A}
+    \templatenode{2}{9.0}{B$\flat$, A$\sharp$}
+    \templatenode{3}{9.5}{B}
+    \templatenode{4}{10.0}{C}
+    \templatenode{5}{10.5}{G}
+    \templatenode{6}{11.0}{B}
+
+    \templatenode{1}{9.5}{C}
+    \templatenode{2}{10.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{10.5}{D}
+    \templatenode{4}{11.0}{E$\flat$, D$\sharp$}
+    \templatenode{5}{11.5}{C}
+    \templatenode{6}{12.0}{E}
+
+  \node[anchor=north, rotate=90, font=\bfseries\scriptsize] at (5*\hlen,2.2*\vlen) {Bass};
+  \node[anchor=north, rotate=90, font=\bfseries\scriptsize] at (6*\hlen,2.2*\vlen) {Counter Bass};
+\end{scope}
+
+% Right grid: treble keyboard (RH)
+\begin{scope}[xshift=\rightshift cm]
+  \drawisogrid
+
+  \node[anchor=east, font=\bfseries\small] at (5.65*\hlen,12.6*\vlen) {Treble Hand (RH)};
+
+    \templatenode{5}{1.5}{C}
+    \templatenode{4}{2.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{2.5}{D}
+    \templatenode{2}{3.0}{E$\flat$, D$\sharp$}
+    \templatenode{1}{3.5}{E}
+
+    \templatenode{5}{2.5}{E$\flat$, D$\sharp$}
+    \templatenode{4}{3.0}{E}
+    \templatenode{3}{3.5}{F}
+    \templatenode{2}{4.0}{G$\flat$, F$\sharp$}
+    \templatenode{1}{4.5}{G}
+
+    \templatenode{5}{3.5}{G$\flat$, F$\sharp$}
+    \templatenode{4}{4.0}{G}
+    \templatenode{3}{4.5}{A$\flat$, G$\sharp$}
+    \templatenode{2}{5.0}{A}
+    \templatenode{1}{5.5}{B$\flat$, A$\sharp$}
+
+    \templatenode{5}{4.5}{A}
+    \templatenode{4}{5.0}{B$\flat$, A$\sharp$}
+    \templatenode{3}{5.5}{B}
+    \templatenode{2}{6.0}{C}
+    \templatenode{1}{6.5}{C$\sharp$, D$\flat$}
+
+    \templatenode{5}{5.5}{C}
+    \templatenode{4}{6.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{6.5}{D}
+    \templatenode{2}{7.0}{E$\flat$, D$\sharp$}
+    \templatenode{1}{7.5}{E}
+
+    \templatenode{5}{6.5}{E$\flat$, D$\sharp$}
+    \templatenode{4}{7.0}{E}
+    \templatenode{3}{7.5}{F}
+    \templatenode{2}{8.0}{G$\flat$, F$\sharp$}
+    \templatenode{1}{8.5}{G}
+
+    \templatenode{5}{7.5}{G$\flat$, F$\sharp$}
+    \templatenode{4}{8.0}{G}
+    \templatenode{3}{8.5}{A$\flat$, G$\sharp$}
+    \templatenode{2}{9.0}{A}
+    \templatenode{1}{9.5}{B$\flat$, A$\sharp$}
+
+    \templatenode{5}{8.5}{A}
+    \templatenode{4}{9.0}{B$\flat$, A$\sharp$}
+    \templatenode{3}{9.5}{B}
+    \templatenode{2}{10.0}{C}
+    \templatenode{1}{10.5}{C$\sharp$, D$\flat$}
+
+    \templatenode{5}{9.5}{C}
+    \templatenode{4}{10.0}{C$\sharp$, D$\flat$}
+    \templatenode{3}{10.5}{D}
+    \templatenode{2}{11.0}{E$\flat$, D$\sharp$}
+    \templatenode{1}{11.5}{E}
+\end{scope}
+
+\end{tikzpicture}
+      </latex-image>
+    </image>
+  </figure>
+</section>
