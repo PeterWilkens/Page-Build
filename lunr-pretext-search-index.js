@@ -51,8 +51,8 @@ var ptx_lunr_docs = [
   "url": "sec-scales-introduction.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Scales",
-  "body": " Scales  There are a number of different scale types eg; Major, Minor, Diminished etc;. Different Scale Types are characterised by the interval between each successive note. A Major Scale has a sequence of whole tone, whole tone, half tone, whole tone,whole tone, whole tone, half tone between the tonic notes.  The interval structure of each of the main scale types will be discussed in the following sections of Chapter 3.  "
+  "title": "Introduction",
+  "body": " Introduction  In this chapter we compare major and minor scale forms by interval pattern and keyboard shape.  "
 },
 {
   "id": "sec-intervals-c-major-scale",
@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.5",
   "title": "C Melodic Minor Scale (Ascending)",
-  "body": " C Melodic Minor Scale (Ascending)  In C melodic minor ascending, the sixth and seventh scale degrees are raised to A and B.  All melodic minor scales use this same ascending interval pattern, so any melodic minor scale can be written ascending by applying this pattern from tonic to tonic.  The C melodic minor ascending scale notes are C, D, E , F, G, A, B, and C.   C melodic minor scale notation on a musical staff (ascending and descending).       Examples of intervals with notation and semitone counts (C melodic minor scale ascending).      "
+  "body": " C Melodic Minor Scale (Ascending)  In C melodic minor ascending, the sixth and seventh scale degrees are raised to A and B.  All melodic minor scales use this same ascending interval pattern, so any ascending melodic minor scale can be written by applying this pattern from tonic to tonic.  The C melodic minor ascending scale notes are C, D, E , F, G, A, B, and C.   C melodic minor scale notation on a musical staff (ascending and descending).       Examples of intervals with notation and semitone counts (C melodic minor scale ascending).      "
 },
 {
   "id": "fig-c-melodic-minor-scale-notation",
@@ -169,7 +169,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.6",
   "title": "C Melodic Minor Scale (Descending)",
-  "body": " C Melodic Minor Scale (Descending)  In C melodic minor descending, the sixth and seventh scale degrees are lowered to A and B , following the C natural minor form.  All melodic minor scales use this same descending interval pattern, so any melodic minor scale can be written descending by applying this pattern from tonic to tonic.  The C melodic minor descending scale notes are C, B , A , G, F, E , D, and C.   C melodic minor scale notation on a musical staff (ascending and descending).       Examples of intervals with notation and semitone counts (C melodic minor scale descending).      "
+  "body": " C Melodic Minor Scale (Descending)  In C melodic minor descending, the sixth and seventh scale degrees are lowered to A and B , following the C natural minor form.  All melodic minor scales use this same descending interval pattern, so any descending melodic minor scale can be written by applying this pattern from tonic to tonic.  The C melodic minor descending scale notes are C, B , A , G, F, E , D, and C.   C melodic minor scale notation on a musical staff (ascending and descending).       Examples of intervals with notation and semitone counts (C melodic minor scale descending).      "
 },
 {
   "id": "fig-c-melodic-minor-descending-scale-notation",
@@ -188,6 +188,186 @@ var ptx_lunr_docs = [
   "number": "3.6.2",
   "title": "",
   "body": " Examples of intervals with notation and semitone counts (C melodic minor scale descending).     "
+},
+{
+  "id": "sec-C-scale-shape",
+  "level": "1",
+  "url": "sec-C-scale-shape.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "C Major Scale",
+  "body": " C Major Scale   Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.    Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.      "
+},
+{
+  "id": "fig-C-major-scale-shape",
+  "level": "2",
+  "url": "sec-C-scale-shape.html#fig-C-major-scale-shape",
+  "type": "Figure",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.     "
+},
+{
+  "id": "sec-D-scale-shape",
+  "level": "1",
+  "url": "sec-D-scale-shape.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "C Major Scale",
+  "body": " C Major Scale   Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.    Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.      "
+},
+{
+  "id": "fig-D-major-scale-shape",
+  "level": "2",
+  "url": "sec-D-scale-shape.html#fig-D-major-scale-shape",
+  "type": "Figure",
+  "number": "4.2.1",
+  "title": "",
+  "body": " Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.     "
+},
+{
+  "id": "sec-G-scale-shape",
+  "level": "1",
+  "url": "sec-G-scale-shape.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "C Major Scale",
+  "body": " C Major Scale   Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.    Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.      "
+},
+{
+  "id": "fig-G-major-scale-shape",
+  "level": "2",
+  "url": "sec-G-scale-shape.html#fig-G-major-scale-shape",
+  "type": "Figure",
+  "number": "4.3.1",
+  "title": "",
+  "body": " Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.     "
+},
+{
+  "id": "sec-melodic-minor-scale-shape",
+  "level": "1",
+  "url": "sec-melodic-minor-scale-shape.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "Melodic Minor Scale Shapes",
+  "body": " Melodic Minor Scale Shapes   Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.    Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.      "
+},
+{
+  "id": "fig-melodic-minor-scale-shape",
+  "level": "2",
+  "url": "sec-melodic-minor-scale-shape.html#fig-melodic-minor-scale-shape",
+  "type": "Figure",
+  "number": "5.1.1",
+  "title": "",
+  "body": " Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.     "
+},
+{
+  "id": "sec-harmonic-minor-scale-shape",
+  "level": "1",
+  "url": "sec-harmonic-minor-scale-shape.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Harmonic Minor Scale Shapes",
+  "body": " Harmonic Minor Scale Shapes   Use this shape to form other major scales where the shape fits, for example E-flat, G-flat, or A.    Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.      "
+},
+{
+  "id": "fig-harmonic-minor-scale-shape",
+  "level": "2",
+  "url": "sec-harmonic-minor-scale-shape.html#fig-harmonic-minor-scale-shape",
+  "type": "Figure",
+  "number": "5.2.1",
+  "title": "",
+  "body": " Bass keyboard (left) and treble keyboard (right) C major scale shape. The first 4 columns in the bass keyboard are Free Bass. Columns 5 and 6 are the same as the Stradella bass arrangement ie. Bass and Counter Bass respectively. The Free Bass notes are arranged chromatically and the Stradella Bass notes are arranged in Fifths.     "
+},
+{
+  "id": "ch-side-by-side-grid",
+  "level": "1",
+  "url": "ch-side-by-side-grid.html",
+  "type": "Section",
+  "number": "1",
+  "title": "Iso Grid Side by Side",
+  "body": " Iso Grid Side by Side  Basic isometric grid for entering chords and intervals.   Basic grid.      "
+},
+{
+  "id": "fig-side-by-side-grid",
+  "level": "2",
+  "url": "ch-side-by-side-grid.html#fig-side-by-side-grid",
+  "type": "Figure",
+  "number": "1.0.3",
+  "title": "",
+  "body": " Basic grid.     "
+},
+{
+  "id": "ch-four-chord-grids",
+  "level": "1",
+  "url": "ch-four-chord-grids.html",
+  "type": "Chapter",
+  "number": "6",
+  "title": "Four-Chord-Grids",
+  "body": " Four-Chord-Grids   Four split isometric chord grids with matching note sequences.    Four split chord grids with C through A on the right column.      "
+},
+{
+  "id": "fig-four-chord-grids",
+  "level": "2",
+  "url": "ch-four-chord-grids.html#fig-four-chord-grids",
+  "type": "Figure",
+  "number": "6.0.1",
+  "title": "",
+  "body": " Four split chord grids with C through A on the right column.     "
+},
+{
+  "id": "sec-bass-treble-build-template-main",
+  "level": "1",
+  "url": "sec-bass-treble-build-template-main.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "Build Templates",
+  "body": " Build Templates   Bass-hand template (left) and treble-hand template (right).      "
+},
+{
+  "id": "fig-bass-treble-build-template",
+  "level": "2",
+  "url": "sec-bass-treble-build-template-main.html#fig-bass-treble-build-template",
+  "type": "Figure",
+  "number": "7.1.1",
+  "title": "",
+  "body": " Bass-hand template (left) and treble-hand template (right).     "
+},
+{
+  "id": "ch-bass-treble-scale-template",
+  "level": "1",
+  "url": "ch-bass-treble-scale-template.html",
+  "type": "Chapter",
+  "number": "8",
+  "title": "Bass\/Treble Scale Template",
+  "body": " Bass\/Treble Scale Template   Extended side-by-side isometric grids: bass-hand (6 columns, left two blank) and treble-hand (right), each carrying 10 rows of the chromatic note sequence.    Bass-hand scale template (left) and treble-hand scale template (right).      "
+},
+{
+  "id": "fig-bass-treble-scale-template",
+  "level": "2",
+  "url": "ch-bass-treble-scale-template.html#fig-bass-treble-scale-template",
+  "type": "Figure",
+  "number": "8.0.1",
+  "title": "",
+  "body": " Bass-hand scale template (left) and treble-hand scale template (right).     "
+},
+{
+  "id": "sec-scale-coordinates-grid-main",
+  "level": "1",
+  "url": "sec-scale-coordinates-grid-main.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Coordinate Templates",
+  "body": " Coordinate Templates   Bass-hand coordinate grid (left) and treble-hand coordinate grid (right).      "
+},
+{
+  "id": "fig-scale-coordinates-grid",
+  "level": "2",
+  "url": "sec-scale-coordinates-grid-main.html#fig-scale-coordinates-grid",
+  "type": "Figure",
+  "number": "9.1.1",
+  "title": "",
+  "body": " Bass-hand coordinate grid (left) and treble-hand coordinate grid (right).     "
 },
 {
   "id": "backmatter-2",
