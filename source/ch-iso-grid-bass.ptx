@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-iso-grid-bass" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Iso-Grid Bass</title>
+  <introduction>
+    <p>
+      Use Grid for chord shapes etc. Notation can be shwn or not
+    </p>
+  </introduction>
+
+  <section xml:id="sec-iso-grid-bass-main">
+    <title>Bass Isometric Grid</title>
+
+    <figure xml:id="fig-iso-grid-bass">
+      <caption>Bass-hand isometric grid (free bass, 4 rows) with aligned bass clef staff above. Low notes left, high notes right. TOP label on right.</caption>
+      <image xml:id="img-iso-grid-bass">
+        <latex-image>
+% -----------------------------------------------------------------------
+% Iso-Grid Bass  –  bass LH grid (low-left/high-right) with staff ABOVE
+%
+% Source: sec-C-scale-shape bass side, free bass columns p=1..4 only.
+%   isoangle=60, vlen=1.5cm, scale=0.75
+%   hlen = (vlen/2)/tan(30) = ~1.299 cm
+%   halfstep = vlen/2 = 0.75 cm
+%
+% 4 horizontal rows (q=1 TOP, q=4 BOTTOM):
+%   q=1 nodes at k = 1,3,5,...,17   (odd k)
+%   q=2 nodes at k = 2,4,6,...,18   (even k)
+%   q=3 nodes at k = 3,5,7,...,19   (odd k, starting k=3)
+%   q=4 nodes at k = 4,6,8,...,20   (even k, starting k=4)
+%
+% Node position:  x = (20-k)*halfstep  (low-left/high-right orientation)
+%                 y = (q-1)*hlen
+% Pitch (semitones above C2): sem = 1.5*(k-1) - 0.5*(q-1)
+%
+% Highlighted nodes (C, E, G = C major chord tones):
+%   k= 1 q=1 → C2    k= 4 q=2 → E2    k= 6 q=2 → G2
+%   k= 9 q=1 → C3    k=10 q=4 → C3
+%   k=12 q=2 → E3    k=14 q=2 → G3
+%   k=17 q=1 → C4    k=18 q=4 → C4
+%
+% Bass clef staff ABOVE grid: bottom staff line = G2 (standard).
+%   pos = diatonic steps above G2:
+%   G2=0, A2=1, B2=2, C3=3, D3=4 (middle), E3=5, F3=6, G3=7, A3=8 (top)
+%   Above: B3=9, C4=10 (1st ledger line above)
+%   Below: F2=-1, E2=-2 (1st ledger below), D2=-3, C2=-4 (2nd ledger below)
+%   Stem UP when pos lt 4 (below middle D3), stem DOWN when pos ge 4.
+% -----------------------------------------------------------------------
+\begin{tikzpicture}[scale=0.75, transform shape]
+\pgfmathsetmacro{\isoangle}{60}
+\pgfmathsetmacro{\vlen}{1.5}           % cm – column width
+\pgfmathsetmacro{\ang}{\isoangle/2}   % 30 deg
+\pgfmathsetmacro{\hlen}{(\vlen/2)/tan(\ang)}  % ~1.299 cm – row height
+\pgfmathsetmacro{\halfstep}{\vlen/2}   % 0.75 cm – basic column unit
+\pgfmathsetmacro{\nrows}{4}
+% Grid extents (cm)
+\pgfmathsetmacro{\gridH}{(\nrows-1)*\hlen}          % vertical span = 3*hlen
+\pgfmathsetmacro{\kmax}{20}
+\pgfmathsetmacro{\gridW}{(\kmax-1)*\halfstep}       % = 19*0.75 = 14.25 cm
+\pgfmathsetmacro{\xleft}{0}
+\pgfmathsetmacro{\xright}{\gridW}
+\pgfmathsetmacro{\ybottom}{0}
+\pgfmathsetmacro{\ytop}{\gridH}
+
+% ---- Isometric grid lines (clipped) ----
+\begin{scope}
+  \clip (\xleft-0.01, \ybottom-0.01) rectangle (\xright+0.01, \ytop+0.01);
+
+  % Horizontal row lines at y = (q-1)*hlen for q=1..4
+  \foreach \q in {1,...,4} {
+    \pgfmathsetmacro{\yy}{(\q-1)*\hlen}
+    \draw[gray, thin] (\xleft, \yy) -- (\xright, \yy);
+  }
+
+  % Vertical column lines at x = (20-k)*halfstep for k=1..20
+  \foreach \k in {1,...,20} {
+    \pgfmathsetmacro{\xx}{(20-\k)*\halfstep}
+    \draw[lightgray, very thin] (\xx, \ybottom) -- (\xx, \ytop);
+  }
+
+  % Diagonal family 1: +60 deg
+  \pgfmathsetmacro{\diaglen}{(\gridW + \gridH + \vlen) * 1.5}
+  \foreach \ki in {1,...,11} {
+    \pgfmathsetmacro{\startx}{(\ki-1)*\vlen}
+    \draw[lightgray, very thin]
+      (\startx, \ybottom) -- ({\startx + \diaglen*cos(60)}, {\ybottom + \diaglen*sin(60)});
+  }
+  \foreach \qi in {1,...,4} {
+    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
+    \draw[lightgray, very thin]
+      (\xleft, \starty) -- ({0 + \diaglen*cos(60)}, {\starty + \diaglen*sin(60)});
+  }
+
+  % Diagonal family 2: -60 deg
+  \foreach \ki in {0,...,11} {
+    \pgfmathsetmacro{\startx}{\ki*\vlen}
+    \draw[lightgray, very thin]
+      (\startx, \ytop) -- ({\startx + \diaglen*cos(-60)}, {\ytop + \diaglen*sin(-60)});
+  }
+  \foreach \qi in {1,...,4} {
+    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
+    \draw[lightgray, very thin]
+      (\xleft, \starty + \hlen*3) -- ({0 + \diaglen*cos(-60)}, {\starty + \hlen*3 + \diaglen*sin(-60)});
+  }
+
+\end{scope}
+
+% ---- Node circles at each (q, k) intersection ----
+% Highlighted (fill=gray!50): C, E, G nodes.  Non-highlighted: fill=gray!10.
+% Node x = (k-1)*halfstep,  y = (q-1)*hlen
+% Pitch: semitone above C3 = 1.5*(k-1) - 0.5*(q-1)
+
+% Row q=1 (TOP, y=3*hlen): k = 1,3,5,7,9,11,13,15,17
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-1)*\halfstep},{(1-1)*\hlen}) {\footnotesize C};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-3)*\halfstep},{(1-1)*\hlen}) {\footnotesize E$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-5)*\halfstep},{(1-1)*\hlen}) {\footnotesize F$\sharp$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-7)*\halfstep},{(1-1)*\hlen}) {\footnotesize A};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-9)*\halfstep},{(1-1)*\hlen}) {\footnotesize C};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-11)*\halfstep},{(1-1)*\hlen}) {\footnotesize E$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-13)*\halfstep},{(1-1)*\hlen}) {\footnotesize F$\sharp$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-15)*\halfstep},{(1-1)*\hlen}) {\footnotesize A};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-17)*\halfstep},{(1-1)*\hlen}) {\footnotesize C};
+
+% Row q=2 (y=2*hlen): k = 2,4,6,8,10,12,14,16,18
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-2)*\halfstep},{(2-1)*\hlen}) {\footnotesize C$\sharp$};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-4)*\halfstep},{(2-1)*\hlen}) {\footnotesize E};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-6)*\halfstep},{(2-1)*\hlen}) {\footnotesize G};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-8)*\halfstep},{(2-1)*\hlen}) {\footnotesize B$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-10)*\halfstep},{(2-1)*\hlen}) {\footnotesize C$\sharp$};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-12)*\halfstep},{(2-1)*\hlen}) {\footnotesize E};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-14)*\halfstep},{(2-1)*\hlen}) {\footnotesize G};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-16)*\halfstep},{(2-1)*\hlen}) {\footnotesize B$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-18)*\halfstep},{(2-1)*\hlen}) {\footnotesize C$\sharp$};
+
+% Row q=3 (y=1*hlen): k = 3,5,7,9,11,13,15,17,19
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-3)*\halfstep},{(3-1)*\hlen}) {\footnotesize D};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-5)*\halfstep},{(3-1)*\hlen}) {\footnotesize F};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-7)*\halfstep},{(3-1)*\hlen}) {\footnotesize A$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-9)*\halfstep},{(3-1)*\hlen}) {\footnotesize B};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-11)*\halfstep},{(3-1)*\hlen}) {\footnotesize D};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-13)*\halfstep},{(3-1)*\hlen}) {\footnotesize F};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-15)*\halfstep},{(3-1)*\hlen}) {\footnotesize A$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-17)*\halfstep},{(3-1)*\hlen}) {\footnotesize B};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-19)*\halfstep},{(3-1)*\hlen}) {\footnotesize D};
+
+% Row q=4 (bottom, y=0): k = 4,6,8,10,12,14,16,18,20
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-4)*\halfstep},{(4-1)*\hlen}) {\footnotesize E$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-6)*\halfstep},{(4-1)*\hlen}) {\footnotesize F$\sharp$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-8)*\halfstep},{(4-1)*\hlen}) {\footnotesize A};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-10)*\halfstep},{(4-1)*\hlen}) {\footnotesize C};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-12)*\halfstep},{(4-1)*\hlen}) {\footnotesize E$\flat$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-14)*\halfstep},{(4-1)*\hlen}) {\footnotesize F$\sharp$};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-16)*\halfstep},{(4-1)*\hlen}) {\footnotesize A};
+\node[circle,draw=gray,fill=gray!50,inner sep=0pt,minimum size=38pt] at ({(20-18)*\halfstep},{(4-1)*\hlen}) {\footnotesize C};
+\node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-20)*\halfstep},{(4-1)*\hlen}) {\footnotesize E$\flat$};
+
+% ---- TOP label on right side ----
+\node[anchor=center, rotate=270, font=\small\bfseries] at ({\xright + 0.55}, {(\ytop)/2}) {TOP};
+
+% ---- Bass staff ABOVE the grid ----
+\pgfmathsetmacro{\staffgap}{0.25}                     % cm between staff lines
+\pgfmathsetmacro{\staffbottom}{\ytop + 3.0}           % bottom staff line G2, 3.0cm above grid top
+\pgfmathsetmacro{\staffleft}{\xleft - 1.4}            % extended left for bass clef symbol
+\pgfmathsetmacro{\staffright}{\xright + 0.04}
+
+\foreach \sl in {0,...,4} {
+  \draw[black, thin] (\staffleft, \staffbottom + \sl*\staffgap)
+                  -- (\staffright, \staffbottom + \sl*\staffgap);
+}
+
+% Bass clef – dots either side of F3 line (4th line = staffbottom + 3*staffgap)
+\node[anchor=base west, inner sep=0pt] at ({\staffleft + 0.04}, {\staffbottom + 3*\staffgap - 0.01}) {%
+  \raisebox{0pt}{\begingroup\normalmusicsize\fontsize{18}{18}\selectfont\bassclef\endgroup}%
+};
+
+% ---- Notes above staff: C2 to C4, aligned to grid columns k=1..20 ----
+% CONFIGURATION: set \nvis = 1 to show, 0 to hide.
+% Notes can only be shown (set to 1) for columns where the grid node is highlighted (fill=gray!50).
+% Non-highlighted columns are locked to 0 and marked [locked].
+%
+% Bass clef positions (pos = diatonic steps above G2, bottom staff line):
+%   G2=0, A2=1, B2=2, C3=3, D3=4 (middle), E3=5, F3=6, G3=7, A3=8 (top)
+%   Above: B3=9, C4=10 (1st ledger line above)
+%   Below: F2=-1, E2=-2 (1st ledger line below), D2=-3, C2=-4 (2nd ledger below)
+%   Stem UP when pos lt 4 (below/on middle D3), stem DOWN when pos gt 4.
+%
+%                              vis  pos   note
+\def\nvisI{1}    \def\nposI{-4}    % k= 1  C2    highlighted – configurable
+\def\nvisII{0}                     % k= 2  C#2   [locked – no highlighted node]
+\def\nvisIII{0}                    % k= 3  D2    [locked – no highlighted node]
+\def\nvisIV{1}   \def\nposIV{-2}   % k= 4  E2    highlighted – configurable
+\def\nvisV{0}                      % k= 5  F2    [locked – no highlighted node]
+\def\nvisVI{1}   \def\nposVI{0}    % k= 6  G2    highlighted – configurable
+\def\nvisVII{0}                    % k= 7  Ab2   [locked – no highlighted node]
+\def\nvisVIII{0}                   % k= 8  Bb2   [locked – no highlighted node]
+\def\nvisIX{1}   \def\nposIX{3}    % k= 9  C3    highlighted – configurable
+\def\nvisX{1}    \def\nposX{3}     % k=10  C3    highlighted – configurable
+\def\nvisXI{0}                     % k=11  Eb3   [locked – no highlighted node]
+\def\nvisXII{1}  \def\nposXII{5}   % k=12  E3    highlighted – configurable
+\def\nvisXIII{0}                   % k=13  F3    [locked – no highlighted node]
+\def\nvisXIV{1}  \def\nposXIV{7}   % k=14  G3    highlighted – configurable
+\def\nvisXV{0}                     % k=15  Ab3   [locked – no highlighted node]
+\def\nvisXVI{0}                    % k=16  A3    [locked – no highlighted node]
+\def\nvisXVII{1} \def\nposXVII{10} % k=17  C4    highlighted – configurable
+\def\nvisXVIII{1}\def\nposXVIII{10}% k=18  C4    highlighted – configurable
+\def\nvisXIX{0}                    % k=19  D4    [locked – no highlighted node]
+\def\nvisXX{0}                     % k=20  Eb4   [locked – no highlighted node]
+%
+\pgfmathsetmacro{\hstep}{\staffgap/2}  % cm per diatonic half-step
+
+% k=1  C2 – pos=−4 (2nd ledger below staff), stem UP
+\ifnum\nvisI=1
+  \draw[black,thin] ({(20-1)*\halfstep-0.20},{\staffbottom-2*\hstep}) -- ({(20-1)*\halfstep+0.20},{\staffbottom-2*\hstep});
+  \draw[black,thin] ({(20-1)*\halfstep-0.20},{\staffbottom-4*\hstep}) -- ({(20-1)*\halfstep+0.20},{\staffbottom-4*\hstep});
+  \filldraw[black] ({(20-1)*\halfstep},{\staffbottom-4*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-1)*\halfstep+0.13},{\staffbottom-4*\hstep}) -- ({(20-1)*\halfstep+0.13},{\staffbottom-4*\hstep+0.9});
+\fi
+%
+% k=4  E2 – pos=−2 (1st ledger below, note sits ON ledger), stem UP
+\ifnum\nvisIV=1
+  \draw[black,thin] ({(20-4)*\halfstep-0.20},{\staffbottom-2*\hstep}) -- ({(20-4)*\halfstep+0.20},{\staffbottom-2*\hstep});
+  \filldraw[black] ({(20-4)*\halfstep},{\staffbottom-2*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-4)*\halfstep+0.13},{\staffbottom-2*\hstep}) -- ({(20-4)*\halfstep+0.13},{\staffbottom-2*\hstep+0.9});
+\fi
+%
+% k=6  G2 – pos=0 (bottom staff line), stem UP
+\ifnum\nvisVI=1
+  \filldraw[black] ({(20-6)*\halfstep},{\staffbottom}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-6)*\halfstep+0.13},{\staffbottom}) -- ({(20-6)*\halfstep+0.13},{\staffbottom+0.9});
+\fi
+%
+% k=9  C3 – pos=3 (2nd space, slightly below middle D3), stem UP
+\ifnum\nvisIX=1
+  \filldraw[black] ({(20-9)*\halfstep},{\staffbottom+3*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-9)*\halfstep+0.13},{\staffbottom+3*\hstep}) -- ({(20-9)*\halfstep+0.13},{\staffbottom+3*\hstep+0.9});
+\fi
+%
+% k=10 C3 – pos=3, stem UP
+\ifnum\nvisX=1
+  \filldraw[black] ({(20-10)*\halfstep},{\staffbottom+3*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-10)*\halfstep+0.13},{\staffbottom+3*\hstep}) -- ({(20-10)*\halfstep+0.13},{\staffbottom+3*\hstep+0.9});
+\fi
+%
+% k=12 E3 – pos=5 (3rd space, above middle D3), stem DOWN
+\ifnum\nvisXII=1
+  \filldraw[black] ({(20-12)*\halfstep},{\staffbottom+5*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-12)*\halfstep-0.13},{\staffbottom+5*\hstep}) -- ({(20-12)*\halfstep-0.13},{\staffbottom+5*\hstep-0.9});
+\fi
+%
+% k=14 G3 – pos=7 (4th space), stem DOWN
+\ifnum\nvisXIV=1
+  \filldraw[black] ({(20-14)*\halfstep},{\staffbottom+7*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-14)*\halfstep-0.13},{\staffbottom+7*\hstep}) -- ({(20-14)*\halfstep-0.13},{\staffbottom+7*\hstep-0.9});
+\fi
+%
+% k=17 C4 – pos=10 (1st ledger line above staff), stem DOWN
+\ifnum\nvisXVII=1
+  \draw[black,thin] ({(20-17)*\halfstep-0.20},{\staffbottom+10*\hstep}) -- ({(20-17)*\halfstep+0.20},{\staffbottom+10*\hstep});
+  \filldraw[black] ({(20-17)*\halfstep},{\staffbottom+10*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-17)*\halfstep-0.13},{\staffbottom+10*\hstep}) -- ({(20-17)*\halfstep-0.13},{\staffbottom+10*\hstep-0.9});
+\fi
+%
+% k=18 C4 – pos=10, stem DOWN
+\ifnum\nvisXVIII=1
+  \draw[black,thin] ({(20-18)*\halfstep-0.20},{\staffbottom+10*\hstep}) -- ({(20-18)*\halfstep+0.20},{\staffbottom+10*\hstep});
+  \filldraw[black] ({(20-18)*\halfstep},{\staffbottom+10*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-18)*\halfstep-0.13},{\staffbottom+10*\hstep}) -- ({(20-18)*\halfstep-0.13},{\staffbottom+10*\hstep-0.9});
+\fi
+
+% ---- Connecting vertical lines from grid top up to just below staff notes ----
+\foreach \k in {1,...,20} {
+  \pgfmathsetmacro{\nxx}{(20-\k)*\halfstep}
+  \draw[lightgray!60, very thin] (\nxx, \ytop) -- (\nxx, {\staffbottom - 4*\hstep - 0.20});
+}
+
+% Bounding box
+\pgfmathsetmacro{\bbleft}{\xleft - 1.65}
+\pgfmathsetmacro{\bbtop}{\staffbottom + 10*\hstep + 0.6}
+\useasboundingbox (\bbleft, {\ybottom - 0.5}) rectangle ({\xright + 0.75}, \bbtop);
+
+\end{tikzpicture}
+        </latex-image>
+      </image>
+    </figure>
+  </section>
+</chapter>

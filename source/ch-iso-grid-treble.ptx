@@ -98,8 +98,8 @@
 
 \end{scope}
 
-% Outer border
-\draw[gray, thin] (\xleft, \ybottom) rectangle (\xright, \ytop);
+Outer border
+%\draw[gray, thin] (\xleft, \ybottom) rectangle (\xright, \ytop);
 
 % ---- Node circles at each (r, p) intersection ----
 % x(r,p) = (2r + (6-p) - kmin) * halfstep = (2r + 6 - p - 3) * halfstep = (2r + 3 - p)*halfstep
@@ -173,7 +173,7 @@
 % ---- Treble staff above the grid ----
 % Staff: 5 lines, gap=staffgap cm; bottom staff line (E4) above ytop
 \pgfmathsetmacro{\staffgap}{0.25}                     % cm between staff lines
-\pgfmathsetmacro{\staffbottom}{\ytop + 1.2}           % cm above grid top (gap between grid and staff)
+\pgfmathsetmacro{\staffbottom}{\ytop + 2.0}           % cm above grid top (gap between grid and staff)
 \pgfmathsetmacro{\staffleft}{\xleft - 1.2}            % extended left to give room for clef before C4
 \pgfmathsetmacro{\staffright}{\xright + 0.04}
 
@@ -190,29 +190,30 @@
 % ---- Notes above staff: chromatic C4..F#5 for columns k=3..21 ----
 % CONFIGURATION: set \nvis = 1 to show, 0 to hide.
 % \nacc sets the accidental label: {} = none, {$\sharp$} = sharp, {$\flat$} = flat.
-% To change which notes are visible, edit the 1/0 values below.
-% To change an accidental spelling (e.g. C# vs Db), change \nacc and the note y-position comment.
+% NOTE: Staff notes can only be shown (set to 1) for columns where the corresponding
+%       grid node is highlighted (fill=gray!50). Non-highlighted columns are locked
+%       to 0 and marked with [locked].
 %
 %                          vis  accidental       position note
-\def\nvisIII{1}   \def\naccIII{}           % k= 3  C4    (ledger below staff)
-\def\nvisIV{0}    \def\naccIV{$\sharp$}    % k= 4  C#4   (ledger below staff)
-\def\nvisV{0}     \def\naccV{}             % k= 5  D4
-\def\nvisVI{0}    \def\naccVI{$\flat$}     % k= 6  Eb4
-\def\nvisVII{1}   \def\naccVII{}           % k= 7  E4
-\def\nvisVIII{0}  \def\naccVIII{}          % k= 8  F4
-\def\nvisIX{0}    \def\naccIX{$\sharp$}    % k= 9  F#4
-\def\nvisX{1}     \def\naccX{}             % k=10  G4
-\def\nvisXI{0}    \def\naccXI{$\flat$}     % k=11  Ab4
-\def\nvisXII{0}   \def\naccXII{}           % k=12  A4
-\def\nvisXIII{0}  \def\naccXIII{$\flat$}   % k=13  Bb4
-\def\nvisXIV{0}   \def\naccXIV{}           % k=14  B4
-\def\nvisXV{1}    \def\naccXV{}            % k=15  C5
-\def\nvisXVI{0}   \def\naccXVI{$\sharp$}   % k=16  C#5
-\def\nvisXVII{0}  \def\naccXVII{}          % k=17  D5
-\def\nvisXVIII{0} \def\naccXVIII{$\flat$}  % k=18  Eb5
-\def\nvisXIX{1}   \def\naccXIX{}           % k=19  E5
-\def\nvisXX{0}    \def\naccXX{}            % k=20  F5
-\def\nvisXXI{0}   \def\naccXXI{$\sharp$}   % k=21  F#5
+\def\nvisIII{1}   \def\naccIII{}           % k= 3  C4    highlighted – configurable
+\def\nvisIV{0}    \def\naccIV{$\sharp$}    % k= 4  C#4   [locked – no highlighted node]
+\def\nvisV{0}     \def\naccV{}             % k= 5  D4    [locked – no highlighted node]
+\def\nvisVI{1}    \def\naccVI{}             % k= 6  E4    highlighted – configurable
+\def\nvisVII{1}   \def\naccVII{}           % k= 7  E4    highlighted – configurable
+\def\nvisVIII{1}  \def\naccVIII{}          % k= 8  G4    highlighted – configurable
+\def\nvisIX{1}    \def\naccIX{}             % k= 9  G4    highlighted – configurable
+\def\nvisX{0}     \def\naccX{}             % k=10  [locked – no highlighted node]
+\def\nvisXI{1}    \def\naccXI{}             % k=11  C5    highlighted – configurable
+\def\nvisXII{1}   \def\naccXII{}           % k=12  C5    highlighted – configurable
+\def\nvisXIII{0}  \def\naccXIII{$\flat$}   % k=13  [locked – no highlighted node]
+\def\nvisXIV{1}   \def\naccXIV{}           % k=14  E5    highlighted – configurable
+\def\nvisXV{1}    \def\naccXV{}            % k=15  E5    highlighted – configurable
+\def\nvisXVI{1}   \def\naccXVI{}           % k=16  G5    highlighted – configurable
+\def\nvisXVII{1}  \def\naccXVII{}          % k=17  G5    highlighted – configurable
+\def\nvisXVIII{0} \def\naccXVIII{$\flat$}  % k=18  [locked – no highlighted node]
+\def\nvisXIX{1}   \def\naccXIX{}           % k=19  C6    highlighted – configurable
+\def\nvisXX{1}    \def\naccXX{}            % k=20  C6    highlighted – configurable
+\def\nvisXXI{0}   \def\naccXXI{$\sharp$}   % k=21  F#5   [locked – no highlighted node]
 %
 \pgfmathsetmacro{\hstep}{\staffgap/2}  % cm per diatonic half-line
 %
@@ -253,18 +254,18 @@
   \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(7-3)*\halfstep-0.12},{\staffbottom+0.05}) {\naccVII};
 \fi
 %
-% k=8  F4  – pos=1 (first space), stem up
+% k=8  G4  – pos=2 (second staff line), stem down
 \ifnum\nvisVIII=1
-  \filldraw[black] ({(8-3)*\halfstep},{\staffbottom+1*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(8-3)*\halfstep+0.13},{\staffbottom+1*\hstep}) -- ({(8-3)*\halfstep+0.13},{\staffbottom+1*\hstep+0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(8-3)*\halfstep-0.12},{\staffbottom+1*\hstep+0.05}) {\naccVIII};
+  \filldraw[black] ({(8-3)*\halfstep},{\staffbottom+2*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(8-3)*\halfstep-0.13},{\staffbottom+2*\hstep}) -- ({(8-3)*\halfstep-0.13},{\staffbottom+2*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(8-3)*\halfstep-0.12},{\staffbottom+2*\hstep+0.05}) {\naccVIII};
 \fi
 %
-% k=9  F#4 – pos=1 (first space), stem up
+% k=9  G4  – pos=2 (second staff line), stem down
 \ifnum\nvisIX=1
-  \filldraw[black] ({(9-3)*\halfstep},{\staffbottom+1*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(9-3)*\halfstep+0.13},{\staffbottom+1*\hstep}) -- ({(9-3)*\halfstep+0.13},{\staffbottom+1*\hstep+0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(9-3)*\halfstep-0.12},{\staffbottom+1*\hstep+0.05}) {\naccIX};
+  \filldraw[black] ({(9-3)*\halfstep},{\staffbottom+2*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(9-3)*\halfstep-0.13},{\staffbottom+2*\hstep}) -- ({(9-3)*\halfstep-0.13},{\staffbottom+2*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(9-3)*\halfstep-0.12},{\staffbottom+2*\hstep+0.05}) {\naccIX};
 \fi
 %
 % k=10 G4  – pos=2 (second staff line), stem down
@@ -274,18 +275,18 @@
   \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(10-3)*\halfstep-0.12},{\staffbottom+2*\hstep+0.05}) {\naccX};
 \fi
 %
-% k=11 Ab4 – pos=3 (second space), stem down
+% k=11 C5  – pos=5 (third space), stem down
 \ifnum\nvisXI=1
-  \filldraw[black] ({(11-3)*\halfstep},{\staffbottom+3*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(11-3)*\halfstep-0.13},{\staffbottom+3*\hstep}) -- ({(11-3)*\halfstep-0.13},{\staffbottom+3*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(11-3)*\halfstep-0.12},{\staffbottom+3*\hstep+0.05}) {\naccXI};
+  \filldraw[black] ({(11-3)*\halfstep},{\staffbottom+5*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(11-3)*\halfstep-0.13},{\staffbottom+5*\hstep}) -- ({(11-3)*\halfstep-0.13},{\staffbottom+5*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(11-3)*\halfstep-0.12},{\staffbottom+5*\hstep+0.05}) {\naccXI};
 \fi
 %
-% k=12 A4  – pos=3 (second space), stem down
+% k=12 C5  – pos=5 (third space), stem down
 \ifnum\nvisXII=1
-  \filldraw[black] ({(12-3)*\halfstep},{\staffbottom+3*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(12-3)*\halfstep-0.13},{\staffbottom+3*\hstep}) -- ({(12-3)*\halfstep-0.13},{\staffbottom+3*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(12-3)*\halfstep-0.12},{\staffbottom+3*\hstep+0.05}) {\naccXII};
+  \filldraw[black] ({(12-3)*\halfstep},{\staffbottom+5*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(12-3)*\halfstep-0.13},{\staffbottom+5*\hstep}) -- ({(12-3)*\halfstep-0.13},{\staffbottom+5*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(12-3)*\halfstep-0.12},{\staffbottom+5*\hstep+0.05}) {\naccXII};
 \fi
 %
 % k=13 Bb4 – pos=4 (middle staff line), stem down
@@ -295,33 +296,32 @@
   \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(13-3)*\halfstep-0.12},{\staffbottom+4*\hstep+0.05}) {\naccXIII};
 \fi
 %
-% k=14 B4  – pos=4 (middle staff line), stem down
+% k=14 E5  – pos=7 (fourth space), stem down
 \ifnum\nvisXIV=1
-  \filldraw[black] ({(14-3)*\halfstep},{\staffbottom+4*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(14-3)*\halfstep-0.13},{\staffbottom+4*\hstep}) -- ({(14-3)*\halfstep-0.13},{\staffbottom+4*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(14-3)*\halfstep-0.12},{\staffbottom+4*\hstep+0.05}) {\naccXIV};
+  \filldraw[black] ({(14-3)*\halfstep},{\staffbottom+7*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(14-3)*\halfstep-0.13},{\staffbottom+7*\hstep}) -- ({(14-3)*\halfstep-0.13},{\staffbottom+7*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(14-3)*\halfstep-0.12},{\staffbottom+7*\hstep+0.05}) {\naccXIV};
 \fi
 %
-% k=15 C5  – pos=5 (upper space), stem down
+% k=15 E5  – pos=7 (fourth space), stem down
 \ifnum\nvisXV=1
-  \filldraw[black] ({(15-3)*\halfstep},{\staffbottom+5*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(15-3)*\halfstep-0.13},{\staffbottom+5*\hstep}) -- ({(15-3)*\halfstep-0.13},{\staffbottom+5*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(15-3)*\halfstep-0.12},{\staffbottom+5*\hstep+0.05}) {\naccXV};
+  \filldraw[black] ({(15-3)*\halfstep},{\staffbottom+7*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(15-3)*\halfstep-0.13},{\staffbottom+7*\hstep}) -- ({(15-3)*\halfstep-0.13},{\staffbottom+7*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(15-3)*\halfstep-0.12},{\staffbottom+7*\hstep+0.05}) {\naccXV};
 \fi
 %
-% k=16 C#5 – pos=5 (upper space), stem down
+% k=16 G5  – pos=9 (space above top staff line), stem down
 \ifnum\nvisXVI=1
-  \filldraw[black] ({(16-3)*\halfstep},{\staffbottom+5*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(16-3)*\halfstep-0.13},{\staffbottom+5*\hstep}) -- ({(16-3)*\halfstep-0.13},{\staffbottom+5*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(16-3)*\halfstep-0.12},{\staffbottom+5*\hstep+0.05}) {\naccXVI};
+  \filldraw[black] ({(16-3)*\halfstep},{\staffbottom+9*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(16-3)*\halfstep-0.13},{\staffbottom+9*\hstep}) -- ({(16-3)*\halfstep-0.13},{\staffbottom+9*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(16-3)*\halfstep-0.12},{\staffbottom+9*\hstep+0.05}) {\naccXVI};
 \fi
 %
-% k=17 D5  – pos=6 (fourth staff line), stem down
+% k=17 G5  – pos=9 (space above top staff line), stem down
 \ifnum\nvisXVII=1
-  \draw[black,thin] ({(17-3)*\halfstep-0.20},{\staffbottom+6*\hstep}) -- ({(17-3)*\halfstep+0.20},{\staffbottom+6*\hstep});
-  \filldraw[black] ({(17-3)*\halfstep},{\staffbottom+6*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(17-3)*\halfstep-0.13},{\staffbottom+6*\hstep}) -- ({(17-3)*\halfstep-0.13},{\staffbottom+6*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(17-3)*\halfstep-0.12},{\staffbottom+6*\hstep+0.05}) {\naccXVII};
+  \filldraw[black] ({(17-3)*\halfstep},{\staffbottom+9*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(17-3)*\halfstep-0.13},{\staffbottom+9*\hstep}) -- ({(17-3)*\halfstep-0.13},{\staffbottom+9*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(17-3)*\halfstep-0.12},{\staffbottom+9*\hstep+0.05}) {\naccXVII};
 \fi
 %
 % k=18 Eb5 – pos=7 (space above fourth line), stem down
@@ -332,21 +332,22 @@
   \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(18-3)*\halfstep-0.12},{\staffbottom+7*\hstep+0.05}) {\naccXVIII};
 \fi
 %
-% k=19 E5  – pos=7 (space above fourth line), stem down
+% k=19 C6  – pos=12 (2nd ledger above staff), stem down
 \ifnum\nvisXIX=1
-  \draw[black,thin] ({(19-3)*\halfstep-0.20},{\staffbottom+6*\hstep}) -- ({(19-3)*\halfstep+0.20},{\staffbottom+6*\hstep});
-  \filldraw[black] ({(19-3)*\halfstep},{\staffbottom+7*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(19-3)*\halfstep-0.13},{\staffbottom+7*\hstep}) -- ({(19-3)*\halfstep-0.13},{\staffbottom+7*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(19-3)*\halfstep-0.12},{\staffbottom+7*\hstep+0.05}) {\naccXIX};
+  \draw[black,thin] ({(19-3)*\halfstep-0.20},{\staffbottom+10*\hstep}) -- ({(19-3)*\halfstep+0.20},{\staffbottom+10*\hstep});
+  \draw[black,thin] ({(19-3)*\halfstep-0.20},{\staffbottom+12*\hstep}) -- ({(19-3)*\halfstep+0.20},{\staffbottom+12*\hstep});
+  \filldraw[black] ({(19-3)*\halfstep},{\staffbottom+12*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(19-3)*\halfstep-0.13},{\staffbottom+12*\hstep}) -- ({(19-3)*\halfstep-0.13},{\staffbottom+12*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(19-3)*\halfstep-0.12},{\staffbottom+12*\hstep+0.05}) {\naccXIX};
 \fi
 %
-% k=20 F5  – pos=8 (top staff line), stem down
+% k=20 C6  – pos=12 (2nd ledger above staff), stem down
 \ifnum\nvisXX=1
-  \draw[black,thin] ({(20-3)*\halfstep-0.20},{\staffbottom+6*\hstep}) -- ({(20-3)*\halfstep+0.20},{\staffbottom+6*\hstep});
-  \draw[black,thin] ({(20-3)*\halfstep-0.20},{\staffbottom+8*\hstep}) -- ({(20-3)*\halfstep+0.20},{\staffbottom+8*\hstep});
-  \filldraw[black] ({(20-3)*\halfstep},{\staffbottom+8*\hstep}) ellipse (0.14 and 0.09);
-  \draw[black,thin] ({(20-3)*\halfstep-0.13},{\staffbottom+8*\hstep}) -- ({(20-3)*\halfstep-0.13},{\staffbottom+8*\hstep-0.9});
-  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(20-3)*\halfstep-0.12},{\staffbottom+8*\hstep+0.05}) {\naccXX};
+  \draw[black,thin] ({(20-3)*\halfstep-0.20},{\staffbottom+10*\hstep}) -- ({(20-3)*\halfstep+0.20},{\staffbottom+10*\hstep});
+  \draw[black,thin] ({(20-3)*\halfstep-0.20},{\staffbottom+12*\hstep}) -- ({(20-3)*\halfstep+0.20},{\staffbottom+12*\hstep});
+  \filldraw[black] ({(20-3)*\halfstep},{\staffbottom+12*\hstep}) ellipse (0.14 and 0.09);
+  \draw[black,thin] ({(20-3)*\halfstep-0.13},{\staffbottom+12*\hstep}) -- ({(20-3)*\halfstep-0.13},{\staffbottom+12*\hstep-0.9});
+  \node[anchor=base east,inner sep=0pt,font=\scriptsize] at ({(20-3)*\halfstep-0.12},{\staffbottom+12*\hstep+0.05}) {\naccXX};
 \fi
 %
 % k=21 F#5 – pos=8 (top staff line), stem down
@@ -368,7 +369,7 @@
 
 % Bounding box
 \pgfmathsetmacro{\bbleft}{\xleft - 1.75}
-\pgfmathsetmacro{\bbtop}{\staffbottom + 8*\hstep + 0.6}
+\pgfmathsetmacro{\bbtop}{\staffbottom + 12*\hstep + 0.6}
 \useasboundingbox (\bbleft, \ybottom - 0.5) rectangle ({\xright + 0.15}, \bbtop);
 
 \end{tikzpicture}

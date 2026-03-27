@@ -30,6 +30,7 @@
     <xi:include href="./ch-square-grid.ptx" />
     <xi:include href="./ch-square-grid-bass-side.ptx" />
     <xi:include href="./ch-iso-grid-treble.ptx" />
+    <xi:include href="./ch-iso-grid-bass.ptx" />
 
     <!-- Include backmatter-->
     <xi:include href="./backmatter.ptx" />
