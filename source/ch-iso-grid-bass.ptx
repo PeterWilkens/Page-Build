@@ -3,7 +3,7 @@
   <title>Iso-Grid Bass</title>
   <introduction>
     <p>
-      Use Grid for chord shapes etc. Notation can be shwn or not
+      Use Grid for scales,chord shapes etc. Notation can be shwn or not
     </p>
   </introduction>
 
@@ -11,7 +11,7 @@
     <title>Bass Isometric Grid</title>
 
     <figure xml:id="fig-iso-grid-bass">
-      <caption>Bass-hand isometric grid (free bass, 4 rows) with aligned bass clef staff above. Low notes left, high notes right. TOP label on right.</caption>
+      <caption>Bass-hand keyboard (free bass. 4 rows). Top of accordion is to right bellows between Music notation and keyboard grid</caption>
       <image xml:id="img-iso-grid-bass">
         <latex-image>
 % -----------------------------------------------------------------------
