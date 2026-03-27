@@ -370,6 +370,78 @@ var ptx_lunr_docs = [
   "body": " Bass-hand coordinate grid (left) and treble-hand coordinate grid (right).     "
 },
 {
+  "id": "sec-squa",
+  "level": "1",
+  "url": "sec-squa.html",
+  "type": "Section",
+  "number": "10.1",
+  "title": "Square Grids",
+  "body": " Square Grids   Tab for Accordion.      "
+},
+{
+  "id": "fig-square-grid",
+  "level": "2",
+  "url": "sec-squa.html#fig-square-grid",
+  "type": "Figure",
+  "number": "10.1.1",
+  "title": "",
+  "body": " Tab for Accordion.     "
+},
+{
+  "id": "sec-squa-bass",
+  "level": "1",
+  "url": "sec-squa-bass.html",
+  "type": "Section",
+  "number": "11.1",
+  "title": "Square Grids Bass Side",
+  "body": " Square Grids Bass Side   Tab for Accordion – Bass Side.      "
+},
+{
+  "id": "fig-square-grid-bass",
+  "level": "2",
+  "url": "sec-squa-bass.html#fig-square-grid-bass",
+  "type": "Figure",
+  "number": "11.1.1",
+  "title": "",
+  "body": " Tab for Accordion – Bass Side.     "
+},
+{
+  "id": "sec-iso-grid-treble-main",
+  "level": "1",
+  "url": "sec-iso-grid-treble-main.html",
+  "type": "Section",
+  "number": "12.1",
+  "title": "Treble Isometric Grid",
+  "body": " Treble Isometric Grid   Treble-hand isometric grid rotated 90 degrees clockwise with aligned treble staff above.      "
+},
+{
+  "id": "fig-iso-grid-treble",
+  "level": "2",
+  "url": "sec-iso-grid-treble-main.html#fig-iso-grid-treble",
+  "type": "Figure",
+  "number": "12.1.1",
+  "title": "",
+  "body": " Treble-hand isometric grid rotated 90 degrees clockwise with aligned treble staff above.     "
+},
+{
+  "id": "sec-iso-grid-bass-main",
+  "level": "1",
+  "url": "sec-iso-grid-bass-main.html",
+  "type": "Section",
+  "number": "13.1",
+  "title": "Bass Isometric Grid",
+  "body": " Bass Isometric Grid   Bass-hand keyboard (free bass. 4 rows). Top of accordion is to right bellows between Music notation and keyboard grid      "
+},
+{
+  "id": "fig-iso-grid-bass",
+  "level": "2",
+  "url": "sec-iso-grid-bass-main.html#fig-iso-grid-bass",
+  "type": "Figure",
+  "number": "13.1.1",
+  "title": "",
+  "body": " Bass-hand keyboard (free bass. 4 rows). Top of accordion is to right bellows between Music notation and keyboard grid     "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
