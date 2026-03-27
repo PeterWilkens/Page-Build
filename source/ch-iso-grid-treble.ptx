@@ -53,50 +53,50 @@
 % Helper: x position for column index k
 % x(k) = (k - kmin)*halfstep
 
-% ---- Isometric grid lines (clipped) ----
-\begin{scope}
-  \clip (\xleft-0.01, \ybottom-0.01) rectangle (\xright+0.01, \ytop+0.01);
-
-  % Horizontal row lines at y = (5-p)*hlen for p=1..5 and half-boundary lines
-  \foreach \p in {1,...,5} {
-    \pgfmathsetmacro{\yy}{(5-\p)*\hlen}
-    \draw[gray, thin] (\xleft, \yy) -- (\xright, \yy);
-  }
-
-  % Vertical column lines at x = (k-kmin)*halfstep for k=kmin..kmax (every half-step)
-  \foreach \k in {3,...,21} {
-    \pgfmathsetmacro{\xx}{(\k-3)*\halfstep}
-    \draw[lightgray, very thin] (\xx, \ybottom) -- (\xx, \ytop);
-  }
-
-  % Diagonal family 1: at +60 deg from horizontal (bottom-left to top-right in rotated frame)
-  % These connect adjacent nodes diagonally (iso up-right direction).
-  % Start points along the bottom edge and left edge, spaced by vlen (2*halfstep).
-  \pgfmathsetmacro{\diaglen}{(\gridW + \gridH + \vlen) * 1.5}
-  \foreach \ki in {1,...,12} {
-    \pgfmathsetmacro{\startx}{(\ki-1)*\vlen}
-    \draw[lightgray, very thin]
-      (\startx, \ybottom) -- ({\startx + \diaglen*cos(60)}, {\ybottom + \diaglen*sin(60)});
-  }
-  \foreach \pi in {1,...,5} {
-    \pgfmathsetmacro{\starty}{(\pi-1)*\hlen}
-    \draw[lightgray, very thin]
-      (\xleft, \starty) -- ({0 + \diaglen*cos(60)}, {\starty + \diaglen*sin(60)});
-  }
-
-  % Diagonal family 2: at -60 deg (top-left to bottom-right in rotated frame)
-  \foreach \ki in {0,...,12} {
-    \pgfmathsetmacro{\startx}{\ki*\vlen}
-    \draw[lightgray, very thin]
-      (\startx, \ytop) -- ({\startx + \diaglen*cos(-60)}, {\ytop + \diaglen*sin(-60)});
-  }
-  \foreach \pi in {1,...,5} {
-    \pgfmathsetmacro{\starty}{(\pi-1)*\hlen}
-    \draw[lightgray, very thin]
-      (\xleft, \starty + \hlen*4) -- ({0 + \diaglen*cos(-60)}, {\starty + \hlen*4 + \diaglen*sin(-60)});
-  }
-
-\end{scope}
+% ---- Isometric grid lines (clipped) – hidden ----
+%\begin{scope}
+%  \clip (\xleft-0.01, \ybottom-0.01) rectangle (\xright+0.01, \ytop+0.01);
+%
+%  % Horizontal row lines at y = (5-p)*hlen for p=1..5 and half-boundary lines
+%  \foreach \p in {1,...,5} {
+%    \pgfmathsetmacro{\yy}{(5-\p)*\hlen}
+%    \draw[gray, thin] (\xleft, \yy) -- (\xright, \yy);
+%  }
+%
+%  % Vertical column lines at x = (k-kmin)*halfstep for k=kmin..kmax (every half-step)
+%  \foreach \k in {3,...,21} {
+%    \pgfmathsetmacro{\xx}{(\k-3)*\halfstep}
+%    \draw[lightgray, very thin] (\xx, \ybottom) -- (\xx, \ytop);
+%  }
+%
+%  % Diagonal family 1: at +60 deg from horizontal (bottom-left to top-right in rotated frame)
+%  % These connect adjacent nodes diagonally (iso up-right direction).
+%  % Start points along the bottom edge and left edge, spaced by vlen (2*halfstep).
+%  \pgfmathsetmacro{\diaglen}{(\gridW + \gridH + \vlen) * 1.5}
+%  \foreach \ki in {1,...,12} {
+%    \pgfmathsetmacro{\startx}{(\ki-1)*\vlen}
+%    \draw[lightgray, very thin]
+%      (\startx, \ybottom) -- ({\startx + \diaglen*cos(60)}, {\ybottom + \diaglen*sin(60)});
+%  }
+%  \foreach \pi in {1,...,5} {
+%    \pgfmathsetmacro{\starty}{(\pi-1)*\hlen}
+%    \draw[lightgray, very thin]
+%      (\xleft, \starty) -- ({0 + \diaglen*cos(60)}, {\starty + \diaglen*sin(60)});
+%  }
+%
+%  % Diagonal family 2: at -60 deg (top-left to bottom-right in rotated frame)
+%  \foreach \ki in {0,...,12} {
+%    \pgfmathsetmacro{\startx}{\ki*\vlen}
+%    \draw[lightgray, very thin]
+%      (\startx, \ytop) -- ({\startx + \diaglen*cos(-60)}, {\ytop + \diaglen*sin(-60)});
+%  }
+%  \foreach \pi in {1,...,5} {
+%    \pgfmathsetmacro{\starty}{(\pi-1)*\hlen}
+%    \draw[lightgray, very thin]
+%      (\xleft, \starty + \hlen*4) -- ({0 + \diaglen*cos(-60)}, {\starty + \hlen*4 + \diaglen*sin(-60)});
+%  }
+%
+%\end{scope}
 
 Outer border
 %\draw[gray, thin] (\xleft, \ybottom) rectangle (\xright, \ytop);
@@ -161,14 +161,8 @@ Outer border
 \node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(2*7+3-1)*\halfstep},{(5-1)*\hlen}) {\footnotesize B$\flat$};
 \node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(2*8+3-1)*\halfstep},{(5-1)*\hlen}) {\footnotesize C$\sharp$};
 
-% ---- Row labels (reversed: p=5 bottom=1, p=1 top=5) on left of staff ----
-% \staffleft = \xleft - 1.2; numbers at \xleft - 1.50 (right edge), TOP to the right of numbers at \xleft - 1.35
-\foreach \p in {1,...,5} {
-  \pgfmathtruncatemacro{\rlabel}{6-\p}
-  \pgfmathsetmacro{\yy}{(5-\p)*\hlen}
-  \node[anchor=east, font=\small] at ({\xleft - 1.50}, \yy) {\rlabel};
-}
-\node[anchor=center, rotate=90, font=\small\bfseries] at ({\xleft - 1.35}, {(\ytop)/2}) {TOP};
+% ---- TOP label on left of grid ----
+\node[anchor=center, rotate=90, font=\small\bfseries] at ({\xleft - 1.35}, {(\ytop)/2}) {Top of Accordion};
 
 % ---- Treble staff above the grid ----
 % Staff: 5 lines, gap=staffgap cm; bottom staff line (E4) above ytop

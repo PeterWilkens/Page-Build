@@ -61,48 +61,48 @@
 \pgfmathsetmacro{\ybottom}{0}
 \pgfmathsetmacro{\ytop}{\gridH}
 
-% ---- Isometric grid lines (clipped) ----
-\begin{scope}
-  \clip (\xleft-0.01, \ybottom-0.01) rectangle (\xright+0.01, \ytop+0.01);
-
-  % Horizontal row lines at y = (q-1)*hlen for q=1..4
-  \foreach \q in {1,...,4} {
-    \pgfmathsetmacro{\yy}{(\q-1)*\hlen}
-    \draw[gray, thin] (\xleft, \yy) -- (\xright, \yy);
-  }
-
-  % Vertical column lines at x = (20-k)*halfstep for k=1..20
-  \foreach \k in {1,...,20} {
-    \pgfmathsetmacro{\xx}{(20-\k)*\halfstep}
-    \draw[lightgray, very thin] (\xx, \ybottom) -- (\xx, \ytop);
-  }
-
-  % Diagonal family 1: +60 deg
-  \pgfmathsetmacro{\diaglen}{(\gridW + \gridH + \vlen) * 1.5}
-  \foreach \ki in {1,...,11} {
-    \pgfmathsetmacro{\startx}{(\ki-1)*\vlen}
-    \draw[lightgray, very thin]
-      (\startx, \ybottom) -- ({\startx + \diaglen*cos(60)}, {\ybottom + \diaglen*sin(60)});
-  }
-  \foreach \qi in {1,...,4} {
-    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
-    \draw[lightgray, very thin]
-      (\xleft, \starty) -- ({0 + \diaglen*cos(60)}, {\starty + \diaglen*sin(60)});
-  }
-
-  % Diagonal family 2: -60 deg
-  \foreach \ki in {0,...,11} {
-    \pgfmathsetmacro{\startx}{\ki*\vlen}
-    \draw[lightgray, very thin]
-      (\startx, \ytop) -- ({\startx + \diaglen*cos(-60)}, {\ytop + \diaglen*sin(-60)});
-  }
-  \foreach \qi in {1,...,4} {
-    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
-    \draw[lightgray, very thin]
-      (\xleft, \starty + \hlen*3) -- ({0 + \diaglen*cos(-60)}, {\starty + \hlen*3 + \diaglen*sin(-60)});
-  }
-
-\end{scope}
+% ---- Isometric grid lines (clipped) – hidden ----
+%\begin{scope}
+%  \clip (\xleft-0.01, \ybottom-0.01) rectangle (\xright+0.01, \ytop+0.01);
+%
+%  % Horizontal row lines at y = (q-1)*hlen for q=1..4
+%  \foreach \q in {1,...,4} {
+%    \pgfmathsetmacro{\yy}{(\q-1)*\hlen}
+%    \draw[gray, thin] (\xleft, \yy) -- (\xright, \yy);
+%  }
+%
+%  % Vertical column lines at x = (20-k)*halfstep for k=1..20
+%  \foreach \k in {1,...,20} {
+%    \pgfmathsetmacro{\xx}{(20-\k)*\halfstep}
+%    \draw[lightgray, very thin] (\xx, \ybottom) -- (\xx, \ytop);
+%  }
+%
+%  % Diagonal family 1: +60 deg
+%  \pgfmathsetmacro{\diaglen}{(\gridW + \gridH + \vlen) * 1.5}
+%  \foreach \ki in {1,...,11} {
+%    \pgfmathsetmacro{\startx}{(\ki-1)*\vlen}
+%    \draw[lightgray, very thin]
+%      (\startx, \ybottom) -- ({\startx + \diaglen*cos(60)}, {\ybottom + \diaglen*sin(60)});
+%  }
+%  \foreach \qi in {1,...,4} {
+%    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
+%    \draw[lightgray, very thin]
+%      (\xleft, \starty) -- ({0 + \diaglen*cos(60)}, {\starty + \diaglen*sin(60)});
+%  }
+%
+%  % Diagonal family 2: -60 deg
+%  \foreach \ki in {0,...,11} {
+%    \pgfmathsetmacro{\startx}{\ki*\vlen}
+%    \draw[lightgray, very thin]
+%      (\startx, \ytop) -- ({\startx + \diaglen*cos(-60)}, {\ytop + \diaglen*sin(-60)});
+%  }
+%  \foreach \qi in {1,...,4} {
+%    \pgfmathsetmacro{\starty}{(\qi-1)*\hlen}
+%    \draw[lightgray, very thin]
+%      (\xleft, \starty + \hlen*3) -- ({0 + \diaglen*cos(-60)}, {\starty + \hlen*3 + \diaglen*sin(-60)});
+%  }
+%
+%\end{scope}
 
 % ---- Node circles at each (q, k) intersection ----
 % Highlighted (fill=gray!50): C, E, G nodes.  Non-highlighted: fill=gray!10.
@@ -154,7 +154,7 @@
 \node[circle,draw=gray,fill=gray!10,inner sep=0pt,minimum size=38pt] at ({(20-20)*\halfstep},{(4-1)*\hlen}) {\footnotesize E$\flat$};
 
 % ---- TOP label on right side ----
-\node[anchor=center, rotate=270, font=\small\bfseries] at ({\xright + 0.55}, {(\ytop)/2}) {TOP};
+\node[anchor=center, rotate=270, font=\small\bfseries] at ({\xright + 0.90}, {(\ytop)/2}) {Top of Accordion};
 
 % ---- Bass staff ABOVE the grid ----
 \pgfmathsetmacro{\staffgap}{0.25}                     % cm between staff lines
