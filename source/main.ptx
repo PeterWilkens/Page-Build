@@ -27,6 +27,10 @@
     <xi:include href="./ch-bass-treble-scale-template.ptx" />
     <xi:include href="./ch-scale-coordinates-grid.ptx" />
     
+    <xi:include href="./ch-square-grid.ptx" />
+    <xi:include href="./ch-square-grid-bass-side.ptx" />
+    <xi:include href="./ch-iso-grid-treble.ptx" />
+
     <!-- Include backmatter-->
     <xi:include href="./backmatter.ptx" />
 

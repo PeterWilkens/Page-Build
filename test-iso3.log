@@ -1,0 +1,678 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.19)  26 MAR 2026 18:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**/tmp/test-iso3.tex
+(/tmp/test-iso3.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+(/root/.TinyTeX/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(/root/.TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/root/.TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/root/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks17
+\pgfutil@tempdima=\dimen149
+\pgfutil@tempdimb=\dimen150
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box53
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/root/.TinyTeX/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/root/.TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/root/.TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (/root/.TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/root/.TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/root/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/root/.TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks19
+\pgfkeys@temptoks=\toks20
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks21
+))
+\pgf@x=\dimen153
+\pgf@y=\dimen154
+\pgf@xa=\dimen155
+\pgf@ya=\dimen156
+\pgf@xb=\dimen157
+\pgf@yb=\dimen158
+\pgf@xc=\dimen159
+\pgf@yc=\dimen160
+\pgf@xd=\dimen161
+\pgf@yd=\dimen162
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count283
+\c@pgf@countb=\count284
+\c@pgf@countc=\count285
+\c@pgf@countd=\count286
+\t@pgf@toka=\toks22
+\t@pgf@tokb=\toks23
+\t@pgf@tokc=\toks24
+\pgf@sys@id@count=\count287
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count288
+\pgfsyssoftpath@bigbuffer@items=\count289
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/root/.TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/root/.TinyTeX/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen163
+\pgfmath@count=\count290
+\pgfmath@box=\box54
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count291
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen164
+\pgf@picmaxx=\dimen165
+\pgf@picminy=\dimen166
+\pgf@picmaxy=\dimen167
+\pgf@pathminx=\dimen168
+\pgf@pathmaxx=\dimen169
+\pgf@pathminy=\dimen170
+\pgf@pathmaxy=\dimen171
+\pgf@xx=\dimen172
+\pgf@xy=\dimen173
+\pgf@yx=\dimen174
+\pgf@yy=\dimen175
+\pgf@zx=\dimen176
+\pgf@zy=\dimen177
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen178
+\pgf@path@lasty=\dimen179
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen180
+\pgf@shorten@start@additional=\dimen181
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box55
+\pgf@hbox=\box56
+\pgf@layerbox@main=\box57
+\pgf@picture@serial@count=\count292
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen182
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen183
+\pgf@pt@y=\dimen184
+\pgf@pt@temp=\dimen185
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen186
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen187
+\pgf@sys@shading@range@num=\count293
+\pgf@shadingcount=\count294
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box58
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box59
+) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen188
+\pgf@nodesepend=\dimen189
+) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/root/.TinyTeX/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/root/.TinyTeX/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/root/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen190
+\pgffor@skip=\dimen191
+\pgffor@stack=\toks28
+\pgffor@toks=\toks29
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count295
+\pgfplotmarksize=\dimen192
+)
+\tikz@lastx=\dimen193
+\tikz@lasty=\dimen194
+\tikz@lastxsaved=\dimen195
+\tikz@lastysaved=\dimen196
+\tikz@lastmovetox=\dimen197
+\tikz@lastmovetoy=\dimen198
+\tikzleveldistance=\dimen199
+\tikzsiblingdistance=\dimen256
+\tikz@figbox=\box60
+\tikz@figbox@bg=\box61
+\tikz@tempbox=\box62
+\tikz@tempbox@bg=\box63
+\tikztreelevel=\count296
+\tikznumberofchildren=\count297
+\tikznumberofcurrentchild=\count298
+\tikz@fig@count=\count299
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count300
+\pgfmatrixcurrentcolumn=\count301
+\pgf@matrix@numberofcolumns=\count302
+)
+\tikz@expandcount=\count303
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/root/.TinyTeX/texmf-dist/tex/latex/musixtex/musixtex.sty (/root/.TinyTeX/texmf-dist/tex/generic/musixtex/musixtex.tex
+MusiXTeX(c) 1.41 <2025-11-15>
+\n@i=\count304
+\n@ii=\count305
+\n@iii=\count306
+\n@iv=\count307
+\n@v=\count308
+\n@vi=\count309
+\n@vii=\count310
+\n@viii=\count311
+\count@=\count312
+\toks@box=\box64
+\w@rkbox=\box65
+\n@otebox=\box66
+\y@=\dimen257
+\y@i=\dimen258
+\y@ii=\dimen259
+\y@iii=\dimen260
+\y@iv=\dimen261
+\y@v=\dimen262
+\group@no=\count313
+\interinstrument=\dimen263
+\N@s=\count314
+\s@Y=\dimen264
+\lin@pos=\dimen265
+\meet@minus@n@iv=\count315
+\interbeam=\dimen266
+\b@amthick=\dimen267
+\Interligne=\dimen268
+\Internote=\dimen269
+\ch@box=\box67
+\musicsize=\count316
+\qd@skip=\dimen270
+\qn@width=\dimen271
+\wn@width=\dimen272
+\txt@ff=\skip51
+\s@indent=\skip52
+\big@spc=\skip53
+\lthick=\dimen273
+\afterruleskip=\skip54
+\staffbotmarg=\dimen274
+\stafftopmarg=\dimen275
+\line@width=\dimen276
+\interportee=\dimen277
+\noport@@=\count317
+\noinstrum@nt=\count318
+\altportee=\dimen278
+\systemheight=\dimen279
+\altplancher=\dimen280
+\instrum@in@group=\skip55
+\boxitsep=\skip56
+\barsinpi@c@=\count319
+\barno=\count320
+\startbarno=\count321
+\sign@skip=\dimen281
+\maxsign@skip=\dimen282
+\x@skip=\dimen283
+\n@skip=\dimen284
+\beforeruleskip=\skip57
+\widthtyp@=\count322
+\lastbarno=\count323
+\cut@v=\skip58
+\init@volta@pos=\skip59
+\volta@startcor=\skip60
+\volta@endcor=\skip61
+\writ@volta@box=\box68
+\barsinlin@=\count324
+\maxbarsinlin@=\count325
+\lastbarpos=\skip62
+\ut@ref=\count326
+\meterskip=\skip63
+\t@c=\toks30
+\clef@skip=\skip64
+\noteskip=\dimen285
+\transpose=\count327
+\normaltranspose=\count328
+\locx@skip=\dimen286
+\elemskip=\dimen287
+\@l@mskip=\dimen288
+\inh@alt=\count329
+\st@bot=\dimen289
+\st@top=\dimen290
+\stem@skip=\dimen291
+\s@lope=\dimen292
+\y@vi=\dimen293
+\lift@rest=\dimen294
+\accshift=\skip65
+\@icresc=\skip66
+\pdl@pos=\dimen295
+\bigwedgebox=\box69
+\@itrillei=\skip67
+\@itrilleii=\skip68
+\@itrilleiii=\skip69
+\@itrilleiv=\skip70
+\@itrillev=\skip71
+\@itrillevi=\skip72
+\tr@number=\count330
+\tr@nspose=\count331
+\o@swz=\toks31
+\o@number=\count332
+\y@vii=\dimen296
+\y@viii=\dimen297
+\y@ix=\dimen298
+\tuptxtb@x=\box70
+\notes@open=\count333
+\k@ii=\skip73
+\i@ni=\dimen299
+\b@xi=\dimen300
+\b@zi=\dimen301
+\c@xi=\dimen302
+\c@zi=\skip74
+\d@xi=\dimen303
+\d@zi=\skip75
+\e@xi=\dimen304
+\e@zi=\skip76
+\b@pi=\count334
+\b@ni=\count335
+\n@pi=\count336
+\a@si=\count337
+\o@si=\count338
+\a@ci=\toks32
+\o@ci=\toks33
+\m@ti=\toks34
+\k@iii=\skip77
+\i@nii=\dimen305
+\b@xii=\dimen306
+\b@zii=\dimen307
+\c@xii=\dimen308
+\c@zii=\skip78
+\d@xii=\dimen309
+\d@zii=\skip79
+\e@xii=\dimen310
+\e@zii=\skip80
+\b@pii=\count339
+\b@nii=\count340
+\n@pii=\count341
+\a@sii=\count342
+\o@sii=\count343
+\a@cii=\toks35
+\o@cii=\toks36
+\m@tii=\toks37
+\k@iiii=\skip81
+\i@niii=\dimen311
+\b@xiii=\dimen312
+\b@ziii=\dimen313
+\c@xiii=\dimen314
+\c@ziii=\skip82
+\d@xiii=\dimen315
+\d@ziii=\skip83
+\e@xiii=\dimen316
+\e@ziii=\skip84
+\b@piii=\count344
+\b@niii=\count345
+\n@piii=\count346
+\a@siii=\count347
+\o@siii=\count348
+\a@ciii=\toks38
+\o@ciii=\toks39
+\m@tiii=\toks40
+\k@iiv=\skip85
+\i@niv=\dimen317
+\b@xiv=\dimen318
+\b@ziv=\dimen319
+\c@xiv=\dimen320
+\c@ziv=\skip86
+\d@xiv=\dimen321
+\d@ziv=\skip87
+\e@xiv=\dimen322
+\e@ziv=\skip88
+\b@piv=\count349
+\b@niv=\count350
+\n@piv=\count351
+\a@siv=\count352
+\o@siv=\count353
+\a@civ=\toks41
+\o@civ=\toks42
+\m@tiv=\toks43
+\k@iv=\skip89
+\i@nv=\dimen323
+\b@xv=\dimen324
+\b@zv=\dimen325
+\c@xv=\dimen326
+\c@zv=\skip90
+\d@xv=\dimen327
+\d@zv=\skip91
+\e@xv=\dimen328
+\e@zv=\skip92
+\b@pv=\count354
+\b@nv=\count355
+\n@pv=\count356
+\a@sv=\count357
+\o@sv=\count358
+\a@cv=\toks44
+\o@cv=\toks45
+\m@tv=\toks46
+\k@ivi=\skip93
+\i@nvi=\dimen329
+\b@xvi=\dimen330
+\b@zvi=\dimen331
+\c@xvi=\dimen332
+\c@zvi=\skip94
+\d@xvi=\dimen333
+\d@zvi=\skip95
+\e@xvi=\dimen334
+\e@zvi=\skip96
+\b@pvi=\count359
+\b@nvi=\count360
+\n@pvi=\count361
+\a@svi=\count362
+\o@svi=\count363
+\a@cvi=\toks47
+\o@cvi=\toks48
+\m@tvi=\toks49
+maxinstruments=6
+\f@xi=\dimen335
+\f@zi=\skip97
+\f@xii=\dimen336
+\f@zii=\skip98
+\f@xiii=\dimen337
+\f@ziii=\skip99
+\f@xiv=\dimen338
+\f@ziv=\skip100
+\f@xv=\dimen339
+\f@zv=\skip101
+\f@xvi=\dimen340
+\f@zvi=\skip102
+ max128beams=6
+\g@bi=\skip103
+\g@hi=\skip104
+\g@bii=\skip105
+\g@hii=\skip106
+\g@biii=\skip107
+\g@hiii=\skip108
+ maxgroups=3
+\s@xi=\dimen341
+\s@si=\toks50
+\s@Yi=\dimen342
+\s@ai=\skip109
+\s@yi=\count364
+\s@Ni=\count365
+\s@zi=\count366
+\s@di=\toks51
+\s@xii=\dimen343
+\s@sii=\toks52
+\s@Yii=\dimen344
+\s@aii=\skip110
+\s@yii=\count367
+\s@Nii=\count368
+\s@zii=\count369
+\s@dii=\toks53
+\s@xiii=\dimen345
+\s@siii=\toks54
+\s@Yiii=\dimen346
+\s@aiii=\skip111
+\s@yiii=\count370
+\s@Niii=\count371
+\s@ziii=\count372
+\s@diii=\toks55
+\s@xiv=\dimen347
+\s@siv=\toks56
+\s@Yiv=\dimen348
+\s@aiv=\skip112
+\s@yiv=\count373
+\s@Niv=\count374
+\s@ziv=\count375
+\s@div=\toks57
+\s@xv=\dimen349
+\s@sv=\toks58
+\s@Yv=\dimen350
+\s@av=\skip113
+\s@yv=\count376
+\s@Nv=\count377
+\s@zv=\count378
+\s@dv=\toks59
+\s@xvi=\dimen351
+\s@svi=\toks60
+\s@Yvi=\dimen352
+\s@avi=\skip114
+\s@yvi=\count379
+\s@Nvi=\count380
+\s@zvi=\count381
+\s@dvi=\toks61
+ maxslurs=6
+\tr@xi=\skip115
+\tr@swi=\toks62
+\tr@yi=\skip116
+\tr@xii=\skip117
+\tr@swii=\toks63
+\tr@yii=\skip118
+\tr@xiii=\skip119
+\tr@swiii=\toks64
+\tr@yiii=\skip120
+\tr@xiv=\skip121
+\tr@swiv=\toks65
+\tr@yiv=\skip122
+\tr@xv=\skip123
+\tr@swv=\toks66
+\tr@yv=\skip124
+\tr@xvi=\skip125
+\tr@swvi=\toks67
+\tr@yvi=\skip126
+ maxtrills=6
+\o@xi=\skip127
+\o@yi=\skip128
+\o@swi=\toks68
+\o@xii=\skip129
+\o@yii=\skip130
+\o@swii=\toks69
+\o@xiii=\skip131
+\o@yiii=\skip132
+\o@swiii=\toks70
+\o@xiv=\skip133
+\o@yiv=\skip134
+\o@swiv=\toks71
+\o@xv=\skip135
+\o@yv=\skip136
+\o@swv=\toks72
+\o@xvi=\skip137
+\o@yvi=\skip138
+\o@swvi=\toks73
+ maxoctlines=6
+\outmux=\write4
+\mulooseness=\count382
+\linegoal=\count383
+\l@eftrightbox=\box71
+\stringraise=\count384
+\stringnum=\count385
+\nslashes=\count386
+\tiny@hgt=\count387
+\inmux=\read3
+) (/root/.TinyTeX/texmf-dist/tex/latex/musixtex/musixltx.tex
+MusiXLaTeX T.125 <8 April 2017>
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/root/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/root/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodepartlowerbox=\box72
+\pgfnodeparttwobox=\box73
+\pgfnodepartthreebox=\box74
+\pgfnodepartfourbox=\box75
+\pgfnodeparttwentybox=\box76
+\pgfnodepartnineteenbox=\box77
+\pgfnodeparteighteenbox=\box78
+\pgfnodepartseventeenbox=\box79
+\pgfnodepartsixteenbox=\box80
+\pgfnodepartfifteenbox=\box81
+\pgfnodepartfourteenbox=\box82
+\pgfnodepartthirteenbox=\box83
+\pgfnodeparttwelvebox=\box84
+\pgfnodepartelevenbox=\box85
+\pgfnodeparttenbox=\box86
+\pgfnodepartninebox=\box87
+\pgfnodeparteightbox=\box88
+\pgfnodepartsevenbox=\box89
+\pgfnodepartsixbox=\box90
+\pgfnodepartfivebox=\box91
+))) (/root/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count388
+)
+No file test-iso3.aux.
+\openout1 = `test-iso3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+(/root/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/root/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\openout4 = `test-iso3.mx1'.
+
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <24> not available
+(Font)              size <24.88> substituted on input line 49.
+
+
+Overfull \hbox (247.66406pt too wide) in paragraph at lines 171--172
+[][] 
+
+\hbox(234.34601+0.0)x345.0 []
+
+[1
+
+{/root/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./test-iso3.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.88pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 15737 strings out of 469514
+ 319232 string characters out of 5469758
+ 740213 words of memory out of 5000000
+ 44094 multiletter control sequences out of 15000+600000
+ 702431 words of font info for 188 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 102i,6n,107p,418b,617s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</root/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></root/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></root/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></root/.TinyTeX/texmf-dist/fonts/type1/public/musixtex-fonts/musix20.pfb>
+Output written on test-iso3.pdf (1 page, 37975 bytes).
+PDF statistics:
+ 31 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+

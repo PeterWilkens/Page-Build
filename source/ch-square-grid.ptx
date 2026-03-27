@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xml:id="ch-square-grid-grid" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Square Grid</title>
+  <introduction>
+    <p>
+     Tab for Accordion
+    </p>
+  </introduction>
+
+  <section xml:id="sec-squa">
+    <title>Square Grids</title>
+
+    <figure xml:id="fig-square-grid">
+      <caption>Tab for Accordion.</caption>
+      <image xml:id="img-square-grid">
+        <latex-image>
+% hsize locked to 258pt; note 1 is at ~19.97pt from minipage left (half-cell before first note at 27.61pt)
+\begin{minipage}{9.8cm}
+\setlength{\hsize}{258pt}%
+\parindent=0pt%
+\begin{music}
+  \nobarnumbers
+  \setclef10
+  \startextract
+  \notes \qa c \qa d \qa e \qa f \qa g \qa h \qa i \qa j \qa i \qa h \qa g \qa f \qa e \qa d \qa c \en
+  \endextract
+\end{music}
+\vspace{2pt}
+% \hspace* physically shifts the TikZ box right in document space (unlike xshift which
+% shifts internal coords AND bounding box together, producing no net document change).
+% musixtex left margin to first note = 27.624 - 7.636 = 19.988pt, so hspace = 19.988pt.
+% Grid x=0 corresponds to first-note-minus-half-cell, aligning notes at cell centres.
+\hspace*{7pt}\begin{tikzpicture}[x=1pt, y=1pt]
+    \useasboundingbox (0,0) rectangle (244.4, 100);
+    % Fine lines every half-cell (7.636pt), 15 cells starting one cell in
+    \foreach \n in {0,...,30} {
+        \pgfmathsetmacro{\xx}{15.273 + \n * 7.636}
+        \draw[gray, very thin] (\xx, 0) -- (\xx, 100);
+    }
+    \foreach \n in {0,...,10} {
+        \draw[gray, very thin] (15.273, \n*10) -- (244.368, \n*10);
+    }
+    % Main cell boundary lines every full cell (15.273pt)
+    \foreach \n in {0,...,15} {
+        \pgfmathsetmacro{\xx}{15.273 + \n * 15.273}
+        \draw[gray, thin] (\xx, 0) -- (\xx, 100);
+    }
+    \foreach \n in {0,...,5} {
+        \draw[gray, thin] (15.273, \n*20) -- (244.368, \n*20);
+    }
+    % Row labels 1 (bottom) to 5 (top)
+    \foreach \n in {1,...,5} {
+        \node[left, font=\small] at (15.273, {(\n-0.5)*20}) {\n};
+    }
+    % Vertical TOP legend on left side
+    \node[anchor=center, rotate=90, font=\small\bfseries] at (2, 50) {TOP};
+\end{tikzpicture}
+\end{minipage}
+
+ </latex-image>
+      </image>
+    </figure>
+  </section>
+</chapter>
+
+
+<!--Key Customizations
+Grid Size: Change step=1cm to adjust the size of each square, for example step=0.5cm for smaller squares.
+Grid Scope: Modify (0,0) grid (5,5) to change the starting and ending coordinates of the grid area.
+Appearance: Change gray to other colors (e.g., blue!20) and very thin to thick or thin to change line styles. -->
+
