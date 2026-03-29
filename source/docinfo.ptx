@@ -23,7 +23,65 @@
 
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
-  <latex-image-preamble> \usepackage{tikz, pgfplots,multirow,musixtex,adjustbox} \usetikzlibrary{positioning,matrix,arrows} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} </latex-image-preamble>
+  <latex-image-preamble>
+    \usepackage{tikz, pgfplots,multirow,musixtex,adjustbox}
+    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+    \usetikzlibrary{decorations.markings}
+    %% Shared isometric chord-grid macro (used by ch-four-chord-grids).
+    %% Requires \hh, \vv, \hlen, \vlen, \ang, \dlen, \xmax, \ymax
+    %% to be defined (via \pgfmathsetmacro) before calling.
+    \providecommand{\drawgridandnotes}{%
+      \begin{scope}
+        \path[clip] (0,0) rectangle (\xmax,\ymax);
+        \pgfmathsetmacro{\ii}{\hh-1}
+        \foreach \i in {1,...,\ii} {
+          \draw[lightgray,very thin] (\i*\hlen,0) -- ++(0,\ymax);
+        }
+        \pgfmathsetmacro{\dvlen}{2*\vv*\dlen}
+        \foreach \i in {0,2,...,\hh} {
+          \draw[lightgray,very thin] (\i*\hlen,0) -- ++(\ang:\dvlen);
+          \draw[lightgray,very thin] (\i*\hlen,\ymax) -- ++(-\ang:\dvlen);
+        }
+        \pgfmathsetmacro{\jj}{\vv-1}
+        \pgfmathsetmacro{\dhlen}{\hh*\dlen}
+        \foreach \j in {1,...,\jj} {
+          \draw[lightgray,very thin] (0,\j*\vlen) -- ++(\ang:\dhlen);
+          \draw[lightgray,very thin] (0,\j*\vlen) -- ++(-\ang:\dhlen);
+        }
+      \end{scope}
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,1.5*\vlen) {C};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,2*\vlen) {C$\sharp$, D$\flat$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,2.5*\vlen) {D};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,3*\vlen) {E$\flat$, D$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,3.5*\vlen) {E};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,2.5*\vlen) {E$\flat$, D$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,3*\vlen) {E};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,3.5*\vlen) {F};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,4*\vlen) {G$\flat$, F$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,4.5*\vlen) {G};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,3.5*\vlen) {G$\flat$, F$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,4*\vlen) {G};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,4.5*\vlen) {A$\flat$, G$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,5*\vlen) {A};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,5.5*\vlen) {B$\flat$, A$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,4.5*\vlen) {A};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,5*\vlen) {B$\flat$, A$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,5.5*\vlen) {B};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,6*\vlen) {C};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,6.5*\vlen) {C$\sharp$, D$\flat$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,5.5*\vlen) {C};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,6*\vlen) {C$\sharp$, D$\flat$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,6.5*\vlen) {D};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,7*\vlen) {E$\flat$, D$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,7.5*\vlen) {E};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (5*\hlen,6.5*\vlen) {E$\flat$, D$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (4*\hlen,7*\vlen) {E};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (3*\hlen,7.5*\vlen) {F};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (2*\hlen,8*\vlen) {G$\flat$, F$\sharp$};
+      \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (1*\hlen,8.5*\vlen) {G};
+    }
+  </latex-image-preamble>
 
   <!-- It is possible to rename elements: -->
   <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
