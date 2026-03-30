@@ -1,69 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="70.00mm" height="30.00mm" viewBox="0.0000 -0.0000 49.7923 21.3396">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" width="42.00mm" height="36.00mm" viewBox="0.0000 -0.0000 19.9169 17.0717">
 <style type="text/css">
 <![CDATA[
 tspan { white-space: pre; }
 ]]>
 </style>
-<g transform="translate(2.1340, 8.9100)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1164" stroke="currentColor" x1="0.0582" y1="0" x2="11.5428" y2="0"/>
+<g transform="translate(0.9484, 8.9484)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0890" stroke="currentColor" x1="0.0445" y1="0" x2="12.9540" y2="0"/>
 </g>
-<g transform="translate(2.1340, 7.9100)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1164" stroke="currentColor" x1="0.0582" y1="0" x2="11.5428" y2="0"/>
+<g transform="translate(0.9484, 7.9484)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0890" stroke="currentColor" x1="0.0445" y1="0" x2="12.9540" y2="0"/>
 </g>
-<g transform="translate(2.1340, 6.9100)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1164" stroke="currentColor" x1="0.0582" y1="0" x2="11.5428" y2="0"/>
+<g transform="translate(0.9484, 6.9484)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0890" stroke="currentColor" x1="0.0445" y1="0" x2="12.9540" y2="0"/>
 </g>
-<g transform="translate(2.1340, 5.9100)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1164" stroke="currentColor" x1="0.0582" y1="0" x2="11.5428" y2="0"/>
+<g transform="translate(0.9484, 5.9484)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0890" stroke="currentColor" x1="0.0445" y1="0" x2="12.9540" y2="0"/>
 </g>
-<g transform="translate(2.1340, 4.9100)">
-<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1164" stroke="currentColor" x1="0.0582" y1="0" x2="11.5428" y2="0"/>
+<g transform="translate(0.9484, 4.9484)">
+<line stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0890" stroke="currentColor" x1="0.0445" y1="0" x2="12.9540" y2="0"/>
 </g>
-<g transform="translate(2.1340, 9.9100)">
-<rect x="5.4540" y="-0.1082" width="2.0758" height="0.2164" ry="0.1082" fill="currentColor"/>
+<g transform="translate(0.9484, 9.9484)">
+<rect x="5.4570" y="-0.0945" width="2.0581" height="0.1890" ry="0.0945" fill="currentColor"/>
 </g>
-<g transform="translate(13.0364, 6.9100)">
-<rect x="0.0000" y="-2.0000" width="0.6986" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(13.4127, 6.9484)">
+<rect x="0.0000" y="-2.0000" width="0.5343" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
-<g transform="translate(12.4659, 6.9100)">
-<rect x="0.0000" y="-2.0000" width="0.2212" height="4.0000" ry="0.0000" fill="currentColor"/>
+<g transform="translate(12.9764, 6.9484)">
+<rect x="0.0000" y="-2.0000" width="0.1692" height="4.0000" ry="0.0000" fill="currentColor"/>
 </g>
 <a style="color:inherit;" xlink:href="textedit:///workspaces/Page-Build/assets/notation/chord-c-major.ly:18:11:12">
-<g transform="translate(7.9340, 7.9100)">
-<path transform="scale(0.0040, -0.0040)" d="M310 63c0 23 -19 40 -40 40c-4 0 -8 -1 -12 -2c-30 -8 -75 -38 -111 -61s-81 -52 -101 -76c-7 -8 -10 -17 -10 -27c0 -23 19 -40 40 -40c4 0 8 1 12 2c30 8 75 38 111 61s81 52 101 76c7 8 10 17 10 27zM256 138c50 0 90 -22 90 -77c0 -18 -5 -37 -10 -55
-c-11 -38 -30 -74 -63 -96c-53 -35 -111 -48 -183 -48c-50 0 -90 22 -90 77c0 18 5 37 10 55c11 38 30 74 63 96c53 36 111 48 183 48z" fill="currentColor"/>
+<g transform="translate(6.7484, 7.9484)">
+<path transform="scale(0.0040, -0.0040)" d="M316 67c0 25 -20 42 -42 42c-4 0 -9 -1 -13 -2c-31 -9 -79 -41 -117 -65s-86 -55 -107 -80c-7 -8 -10 -19 -10 -29c0 -25 20 -42 42 -42c4 0 9 1 13 2c31 9 79 41 117 65s86 55 107 80c7 8 10 19 10 29zM265 135c44 0 78 -21 78 -68c0 -19 -5 -39 -11 -57
+c-12 -37 -33 -71 -65 -93c-53 -36 -114 -52 -189 -52c-44 0 -78 21 -78 68c0 19 5 39 11 57c12 37 33 71 65 93c53 36 114 52 189 52z" fill="currentColor"/>
 </g>
 </a>
 <a style="color:inherit;" xlink:href="textedit:///workspaces/Page-Build/assets/notation/chord-c-major.ly:18:5:6">
-<g transform="translate(7.9340, 9.9100)">
-<path transform="scale(0.0040, -0.0040)" d="M310 63c0 23 -19 40 -40 40c-4 0 -8 -1 -12 -2c-30 -8 -75 -38 -111 -61s-81 -52 -101 -76c-7 -8 -10 -17 -10 -27c0 -23 19 -40 40 -40c4 0 8 1 12 2c30 8 75 38 111 61s81 52 101 76c7 8 10 17 10 27zM256 138c50 0 90 -22 90 -77c0 -18 -5 -37 -10 -55
-c-11 -38 -30 -74 -63 -96c-53 -35 -111 -48 -183 -48c-50 0 -90 22 -90 77c0 18 5 37 10 55c11 38 30 74 63 96c53 36 111 48 183 48z" fill="currentColor"/>
+<g transform="translate(6.7484, 9.9484)">
+<path transform="scale(0.0040, -0.0040)" d="M316 67c0 25 -20 42 -42 42c-4 0 -9 -1 -13 -2c-31 -9 -79 -41 -117 -65s-86 -55 -107 -80c-7 -8 -10 -19 -10 -29c0 -25 20 -42 42 -42c4 0 9 1 13 2c31 9 79 41 117 65s86 55 107 80c7 8 10 19 10 29zM265 135c44 0 78 -21 78 -68c0 -19 -5 -39 -11 -57
+c-12 -37 -33 -71 -65 -93c-53 -36 -114 -52 -189 -52c-44 0 -78 21 -78 68c0 19 5 39 11 57c12 37 33 71 65 93c53 36 114 52 189 52z" fill="currentColor"/>
 </g>
 </a>
 <a style="color:inherit;" xlink:href="textedit:///workspaces/Page-Build/assets/notation/chord-c-major.ly:18:8:9">
-<g transform="translate(7.9340, 8.9100)">
-<path transform="scale(0.0040, -0.0040)" d="M310 63c0 23 -19 40 -40 40c-4 0 -8 -1 -12 -2c-30 -8 -75 -38 -111 -61s-81 -52 -101 -76c-7 -8 -10 -17 -10 -27c0 -23 19 -40 40 -40c4 0 8 1 12 2c30 8 75 38 111 61s81 52 101 76c7 8 10 17 10 27zM256 138c50 0 90 -22 90 -77c0 -18 -5 -37 -10 -55
-c-11 -38 -30 -74 -63 -96c-53 -35 -111 -48 -183 -48c-50 0 -90 22 -90 77c0 18 5 37 10 55c11 38 30 74 63 96c53 36 111 48 183 48z" fill="currentColor"/>
+<g transform="translate(6.7484, 8.9484)">
+<path transform="scale(0.0040, -0.0040)" d="M316 67c0 25 -20 42 -42 42c-4 0 -9 -1 -13 -2c-31 -9 -79 -41 -117 -65s-86 -55 -107 -80c-7 -8 -10 -19 -10 -29c0 -25 20 -42 42 -42c4 0 9 1 13 2c31 9 79 41 117 65s86 55 107 80c7 8 10 19 10 29zM265 135c44 0 78 -21 78 -68c0 -19 -5 -39 -11 -57
+c-12 -37 -33 -71 -65 -93c-53 -36 -114 -52 -189 -52c-44 0 -78 21 -78 68c0 19 5 39 11 57c12 37 33 71 65 93c53 36 114 52 189 52z" fill="currentColor"/>
 </g>
 </a>
-<g transform="translate(2.9340, 7.9100)">
-<path transform="scale(0.0040, -0.0040)" d="M379 264c3 0 7 1 10 1c157 0 258 -129 258 -263c0 -77 -33 -155 -108 -211c-22 -16 -46 -29 -72 -37c3 -33 4 -66 4 -99c0 -21 0 -41 -1 -62c-7 -121 -91 -229 -211 -229c-108 0 -196 88 -196 197c0 58 54 103 113 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95
-c-9 0 -18 1 -27 4c25 -37 66 -61 113 -61c95 0 156 93 162 191c1 19 2 38 2 57c0 29 -1 58 -3 87c-29 -5 -58 -8 -88 -8c-189 0 -333 173 -333 376c0 177 129 308 244 443c-20 62 -40 124 -48 189c-7 52 -7 105 -7 158c0 114 54 221 147 288c4 3 8 4 12 4c5 0 9 -2 13 -5
-c72 -83 135 -243 135 -356c0 -142 -84 -255 -176 -364c21 -68 40 -136 57 -205zM463 -201c65 24 110 94 110 161c0 88 -64 175 -167 188c24 -114 44 -227 57 -349zM77 25c0 -133 128 -243 261 -243c27 0 55 1 81 5c-13 126 -35 244 -60 362c-79 -8 -124 -60 -124 -118
-c0 -43 25 -88 80 -120c5 -5 7 -11 7 -17c0 -12 -10 -23 -23 -23c-3 0 -7 1 -10 2c-81 43 -118 115 -118 186c0 89 60 177 163 200c-14 57 -30 113 -47 169c-105 -122 -210 -243 -210 -403zM403 1038c-99 -46 -161 -145 -161 -254c0 -71 21 -130 39 -188
-c78 97 142 199 142 324c0 51 -4 72 -20 118z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///workspaces/Page-Build/assets/notation/chord-c-major.ly:18:16:17">
+<g transform="translate(6.7484, 3.9551)">
+<text font-family="serif" font-weight="bold" font-size="2.2002" text-anchor="start" fill="currentColor">
+<tspan>C Maj</tspan>
+</text>
 </g>
-<g transform="translate(9.2421, 6.9100)">
-<rect x="-0.0757" y="-2.5000" width="0.1514" height="5.2544" ry="0.0500" fill="currentColor"/>
+</a>
+<g transform="translate(1.7484, 7.9484)">
+<path transform="scale(0.0040, -0.0040)" d="M374 260c5 0 10 1 15 1c154 0 254 -127 254 -259c0 -76 -33 -153 -107 -208c-22 -17 -47 -29 -73 -37c3 -36 5 -72 5 -108c0 -19 0 -37 -1 -56c-7 -120 -88 -226 -206 -226c-108 0 -195 87 -195 195c0 58 53 104 112 104c54 0 95 -48 95 -104c0 -52 -43 -95 -95 -95
+c-12 0 -24 4 -35 9c26 -41 70 -70 121 -70c96 0 157 93 163 193c1 18 2 35 2 53c0 32 -2 64 -5 96c-29 -5 -58 -8 -89 -8c-188 0 -333 171 -333 372c0 178 133 306 251 440c-18 63 -35 126 -42 191c-6 51 -7 102 -7 154c0 116 55 226 150 295c2 2 5 3 8 3s6 -1 8 -3
+c70 -84 132 -246 132 -359c0 -144 -87 -256 -183 -365c20 -69 39 -138 55 -208zM459 -205c69 24 117 96 117 166c0 92 -69 184 -179 193c25 -117 48 -235 62 -359zM71 31c0 -136 131 -251 267 -251c28 0 55 2 82 6c-15 128 -38 247 -64 367c-79 -9 -125 -62 -125 -121
+c0 -44 26 -92 82 -124c4 -4 7 -9 7 -14c0 -11 -9 -21 -20 -21c-3 0 -6 1 -9 2c-80 43 -116 114 -116 184c0 88 57 173 158 196c-14 60 -30 119 -46 178c-108 -121 -216 -242 -216 -402zM411 1050c-99 -50 -161 -151 -161 -262c0 -76 15 -137 33 -200c82 97 149 198 149 325
+c0 58 -4 84 -21 137z" fill="currentColor"/>
 </g>
-<g transform="translate(-5.8755, 18.7168)">
+<g transform="translate(8.0626, 6.9484)">
+<rect x="-0.0579" y="-2.5000" width="0.1158" height="5.2316" ry="0.0333" fill="currentColor"/>
+</g>
+<g transform="translate(-21.7806, 15.6344)">
 <a xlink:href="https://lilypond.org/">
-<rect x="0.0000" y="-0.4888" width="61.5433" height="2.1602" fill="none" stroke="none" stroke-width="0.0"/>
+<rect x="0.0000" y="-0.4888" width="63.4781" height="2.1604" fill="none" stroke="none" stroke-width="0.0"/>
 </a>
 </g>
-<g transform="translate(-5.8755, 18.7168)">
-<text font-family="serif" font-size="2.1999" text-anchor="start" fill="currentColor">
-<tspan>Music engraving by LilyPond 2.24.4—www.lilypond.org</tspan>
+<g transform="translate(-21.7806, 15.6344)">
+<text font-family="serif" font-size="2.2002" text-anchor="start" fill="currentColor">
+<tspan>Music engraving by LilyPond 2.25.12—www.lilypond.org</tspan>
 </text>
 </g>
 </svg>

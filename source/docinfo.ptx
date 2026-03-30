@@ -31,6 +31,15 @@
     %% Shared isometric chord-grid macro (used by ch-four-chord-grids).
     %% Requires \hh, \vv, \hlen, \vlen, \ang, \dlen, \xmax, \ymax
     %% to be defined (via \pgfmathsetmacro) before calling.
+    %% Node-select helper: \gn{col}{row}{label}{0or1}
+    %% 0 = fill=gray!10 (default), 1 = fill=gray!50 (highlighted)
+    \newcommand{\gn}[4]{%
+      \ifnum#4=1
+        \node[circle, draw=gray, fill=gray!50, inner sep=1pt, minimum size=40pt] at (#1*\hlen,#2*\vlen) {#3};%
+      \else
+        \node[circle, draw=gray, fill=gray!10, inner sep=1pt, minimum size=40pt] at (#1*\hlen,#2*\vlen) {#3};%
+      \fi
+    }
     \providecommand{\drawgridandnotes}{%
       \begin{scope}
         \path[clip] (0,0) rectangle (\xmax,\ymax);

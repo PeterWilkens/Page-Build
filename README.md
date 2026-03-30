@@ -9,6 +9,20 @@ To compile the book as an accessible website, run `pretext build web` in a termi
 
 To preview your output, run `pretext view web`.
 
+## Updating Staff Notation From Grid Nodes
+
+If you change selected nodes in `source/ch-four-chord-grids.ptx`, run the VS Code task:
+
+- `Terminal` -> `Run Task...` -> `Update Notation From Nodes`
+
+This task runs `python3 update-notation.py`, which regenerates `assets/notation/staff-grid1.ly` through `assets/notation/staff-grid4.ly`, recompiles the SVG notation assets, and rebuilds web output.
+
+To update automatically while you edit, run the VS Code task:
+
+- `Terminal` -> `Run Task...` -> `Watch Notation From Nodes`
+
+This starts a background watcher that monitors `source/ch-four-chord-grids.ptx` and runs `update-notation.py` each time you save changes. Stop it with `Terminal` -> `Terminate Task` (or `Ctrl+C` in the task terminal).
+
 To deploy your output to GitHub pages, run `pretext deploy`.
 
 To compile a pdf, run `pretext build print`.
